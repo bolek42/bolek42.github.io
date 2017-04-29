@@ -30,7 +30,6 @@ The following image shows, the setup for sidechannel analysis of a desktop PC:
 The desktop PC on the left is the Device Under Test (DUT) with a loop antenna on top, that gets 'attacked' by the laptop on the right
 In the middle, the upconverter and SDR receiver is located.
 
-
 A simple Experiment to test for basic sidechannel effects to use the following programm, that puts load on one CPU core and then sleeps for a while.
 
 ```python

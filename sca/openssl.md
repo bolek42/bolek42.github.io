@@ -31,3 +31,15 @@ It seems that the runtime of the multiplications correlate with the newly appear
 
 ![alt tag](images/dell-mul-2048-mean.jpg)
 
+One advantage to Differential Poweranalysis is, that it can be easily adopted to data with a higher dimension.
+In this case Differential power analysis is directly performed on the spectrogram, that reveals the location of sidechannel leakage in time and frequency domain.
+
+The following image shows a DPA on the spectrogram of multiplications, wheras arg are two different numbers lower than N.
+No obvious differences can be observed.
+
+![alt tag](images/dell-mul-dpa-equal.jpg)
+
+If we choose one number greater and one smaller than N, strong differences can be observed in the spectrogram.
+This means it is possible to compare one argument with N just by looking at the electrical emmanations of the device.
+
+![alt tag](images/dell-mul-dpa-unequal.jpg)
