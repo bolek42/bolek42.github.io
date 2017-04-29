@@ -44,6 +44,12 @@ There are obvious differences in the spectrogram of an idle or busy CPU.
 
 ![alt tag](images/idle-busy.jpg)
 
+Further analysis of the Dell Optiplex showed an very interesting form of side-channel leakage.
+The following spectrogram shows OpenSSL multiplications encapsulated by dummy operations (tight for loop)
+It seems that the sidechannel effects seems to be frequency modulated on some carrieres.
+
+![alt tag](images/dell-mul-raw.jpg)
+
 ## Arduino
 
 ![alt tag](images/setup-arduino.jpg)
