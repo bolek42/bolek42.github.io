@@ -19,7 +19,7 @@ Even though if a gate output changes its value and the voltage of the output cha
 This leads to the Hamming-Distance model of Power consumption, that the powerconsumption of CMOS gate is proportional to the number of flipping bits.
 
 
-## Desktop PCs
+## [Desktop PC](sca/openssl.md)
 
 Even desktop PCs and Laptops emmits measurable sidechannel effects, that might be exploitable as Genkin et.al. showed.
 These are mostly caused by the CPU voltage regulation, that stabilizes the high frequency fluctuations of the CPU power consumption using inductiors and capacitors and emmiting low frequency signals, that are correlating with individual operations on the CPU.
@@ -49,6 +49,9 @@ It seems that the sidechannel effects seems to be frequency modulated on some ca
 
 ![alt tag](images/dell-mul-raw.jpg)
 
-## Arduino
+## [Arduino](arduino.md)
+
+Also embedded devices such as an Arduino show sidechannel effects.
+Similar to the desktop PC setup, a small loop antenna was used to pick up such signals
 
 ![alt tag](images/setup-arduino.jpg)

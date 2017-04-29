@@ -41,6 +41,11 @@ Some frequencies show high response, if the offset of the wavelet matches the of
 These also match the carrier frequencies in the spectrogram above.
 By searching for the maximum ins this transformed signal, the best trigger signal can be determined.
 
+This method can also be used to scan the spectrum to find sidechannel leakage of a new device.
+The image shows the wavelet response for an Arduino Mega2560 from 1MHz - 13MHz.
+
+![alt tag](images/arduino-scan.jpg)
+
 ## Static alignment
 
 ## Dynamic alignment
