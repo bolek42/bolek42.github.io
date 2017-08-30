@@ -1,3 +1,7 @@
+<script src="js/w3.js"></script>
+<div w3-include-html="bar.html"></div>
+<script>w3.includeHTML();</script>
+
 ## Leakage
 
 By using the method for finfing trigger frequencies, we can scan the spectrum to search for sidechannel leakage for a new device.

@@ -1,3 +1,7 @@
+<script src="js/w3.js"></script>
+<div w3-include-html="bar.html"></div>
+<script>w3.includeHTML();</script>
+
 ## Abstract
 OpenSSL implements arithmetic primitives such as multiplication and exponentiation in the 'Big Number Library'.
 These primitives often shows side channel effects, that can be measured using a software defined radio.
