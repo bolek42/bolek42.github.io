@@ -15,11 +15,12 @@ The geiger counter shows a dose rate of 1 mSv a couple of centimeters away.
 ![alt tag](images/xray.jpg)
 
 The difference between a low preassure and a high vacuum discharge are shown in the following picture.
-These Pictures were made using a 4cm glass tube that can be evacuated with the vacuum pump.
-A high positive voltage is applied on the top, wheras the bottom copper tube is grounded.
-Even with the pre vacuum pump, cathod rays are visible.
-With the diffusion pump enabled, there not enough gas molecules that allow a discharge.
-Instead arcing takes place on the inside of the glas tube, due to some impurities.
+These Pictures were made using glass tube with 4cm diameter, that can be evacuated.
+A high positive voltage is applied on the top using th 40kV cascade, wheras the bottom copper tube is grounded.
+On the left hand side the diffusion pump is switched off, even though cathod rays are visible.
+With the diffusion (right), there are not enough gas molecules for a gas discharge.
+Instead arcing takes place on the inside of the glas tube, due to some impurities on the surface.
+In addition a small amount of X-rays are generated.
 
 ![alt tag](images/disch.jpg)
 
