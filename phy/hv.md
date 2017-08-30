@@ -1,3 +1,7 @@
+<script src="js/w3.js"></script>
+<div w3-include-html="bar.html"></div>
+<script>w3.includeHTML();</script>
+
 ## 40kV Cascade
 
 The first high voltage cascade was build by using 10nF 2kV capacitors and a series of 3 1N4007 diodes in series.
