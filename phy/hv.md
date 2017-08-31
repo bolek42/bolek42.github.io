@@ -15,3 +15,8 @@ The second Cascade was build using 20kV 100pF capacitors and 20kV diodes, thus r
 The first driver was also based on the same circuit as the 40kV one but on high loads, the transistors failed within seconds.
 The main problem was probably the too small cooling fins.
 Even though some powerfull discharges could be acchieved
+
+![alt tag](images/cascade-ii.jpg)
+
+The new driver for the Cascade was based on the ZVS circuit using IRFZ44N which can handle 49A @ 55V.
+As the FETs have a RDS of only 17mOhm they dissipate less heat than the 2N3055 transistors.
