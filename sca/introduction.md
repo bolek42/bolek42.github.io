@@ -1,8 +1,3 @@
-## Abstract
-
-Sidechannels are uninteded information leakage of an implementation.
-
-
 ## Electrical Emmanation Attacks
 
 All electronic devices create some sort of electrical emmanations, that are caused by voltage and current fluctuations.

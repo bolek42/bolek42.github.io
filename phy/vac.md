@@ -7,7 +7,7 @@ Using a filament from a halogen lamp and a high voltage power supply, a simple d
 Electrons are emmited from the glowing tungstend wire and are accelerated to the positive plate.
 If the vacuum is good enough that the electrons are not slowed down by remaining gas, the assembly should be able to generate some X-rays.
 The following foto was taken using a delayed shutter and the high voltage supply was switched on from a safe distance of a couple of meters behind a concrete wall to avoid unnecesarry irradiation.
-The geiger counter shows a dose rate of 1.5 mSv a couple of centimeters away.
+The geiger counter shows a dose rate of 1.5 mSv/h a couple of centimeters away.
 
 ![alt tag](images/xray.jpg)
 

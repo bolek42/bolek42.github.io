@@ -34,4 +34,6 @@ The main problem was probably the too small cooling fins, even though some power
 
 The new driver for the Cascade was based on the ZVS circuit using IRFZ44N which can handle 49A @ 55V.
 As the FETs have a RDS of only 17mOhm they dissipate less heat than the 2N3055 transistors.
-At 12V the dirver draws up to 11A without any problems.
+At 15V the dirver draws up to 10A without any problems.
+
+![alt tag](images/zvs.jpg)
