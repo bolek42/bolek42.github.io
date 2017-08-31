@@ -1,7 +1,3 @@
-<script src="js/w3.js"></script>
-<div w3-include-html="bar.html"></div>
-<script>w3.includeHTML();</script>
-
 ## Abstract
 
 A SDR samples a part of the RF spectrum as a stream of complex samples.

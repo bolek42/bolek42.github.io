@@ -1,16 +1,26 @@
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+<head>
+  {% seo %}
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
 
-<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:15%">
-  <h3 class="w3-bar-item">Sidechannel Attacks & SDR</h3>
-    <a href="sca/introduction.html" class="w3-bar-item w3-button">Introduction</a>
-    <a href="sca/capture.html" class="w3-bar-item w3-button">Capture</a>
-    <a href="sca/openssl.html" class="w3-bar-item w3-button">OpenSSL</a>
-    <a href="sca/arduino.html" class="w3-bar-item w3-button">Arduino</a>
-  <h3 class="w3-bar-item">Physics</h3>
-    <a href="phy/vac.html" class="w3-bar-item w3-button">Vacuum</a>
-    <a href="phy/hv.html" class="w3-bar-item w3-button">High Voltage</a>
-</div>
+<body>
+  <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:15%">
+    <h3 class="w3-bar-item">Sidechannel Attacks & SDR</h3>
+      <a href="sca/introduction.html" class="w3-bar-item w3-button">Introduction</a>
+      <a href="sca/capture.html" class="w3-bar-item w3-button">Capture</a>
+      <a href="sca/openssl.html" class="w3-bar-item w3-button">OpenSSL</a>
+      <a href="sca/arduino.html" class="w3-bar-item w3-button">Arduino</a>
+    <h3 class="w3-bar-item">Physics</h3>
+      <a href="phy/vac.html" class="w3-bar-item w3-button">Vacuum</a>
+      <a href="phy/hv.html" class="w3-bar-item w3-button">High Voltage</a>
+  </div>
 
-<div style="margin-left:25%" class="container content">
-{{ content }}
-</div>
+  <div style="margin-left:25%" class="container content">
+    {{ content }}
+  </div>
+
+</body>
+
+</html>
