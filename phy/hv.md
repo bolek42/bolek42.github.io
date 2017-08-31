@@ -15,4 +15,7 @@ It was powered by 2N3055 feedback circuit.
 
 ## 200kV Cascade
 
-
+The second Cascade was build using 20kV 100pF capacitors and 20kV diodes, thus resulting in a maximum output voltage of 200kV.
+The first driver was also based on the same circuit as the 40kV one but on high loads, the transistors failed within seconds.
+The main problem was probably the too small cooling fins.
+Even though some powerfull discharges could be acchieved
