@@ -25,12 +25,12 @@ Sweeping the real part of z0 from -1.6 to 1.6
 
 Sweeping the imaginary part of z0 from -1.2 to 1.2
 <video width="100%" controls>
-  <source src="vid/z0r-1.6.mp4" type="video/mp4">
+  <source src="vid/z0i-1.2.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
 <video width="100%" controls>
-  <source src="vid/z0r-closeup.mp4" type="video/mp4">
+  <source src="vid/z0i-closeup.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
