@@ -6,7 +6,7 @@ The following experiments are done on a Dell Optiplex.
 
 ## Multiplications
 
-To test for sidechannel effects of the multipication routine of OpenSSL the following code was used.
+To test for side-channel effects of the multipication routine of OpenSSL the following code was used.
 r is a random number and arg is user controlled input.
 
 ```C
@@ -17,7 +17,7 @@ for (i=0; i < 8000000; i++) i ^= 0;
 
 The Spectrogram shows the execution of the test program on a Dell Optiplex.
 The multiplications are clearly distinguishable from the dummy operations, as the noise on the frequency axis increases.
-This seems to be an example of frequency modulated sidechannel leakage.
+This seems to be an example of frequency modulated side-channel leakage.
 
 ![alt tag](images/dell-mul-raw.jpg)
 
@@ -32,7 +32,7 @@ It seems that the runtime of the multiplications correlate with the newly appear
 ![alt tag](images/dell-mul-2048-mean.jpg)
 
 One advantage to Differential Poweranalysis is, that it can be easily adopted to data with a higher dimension.
-In this case Differential power analysis is directly performed on the spectrogram, that reveals the location of sidechannel leakage in time and frequency domain.
+In this case Differential power analysis is directly performed on the spectrogram, that reveals the location of side-channel leakage in time and frequency domain.
 
 The following image shows a DPA on the spectrogram of multiplications, wheras arg are two different numbers lower than N.
 No obvious differences can be observed.

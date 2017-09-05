@@ -1,7 +1,7 @@
 ## Abstract
 
 A SDR digitizes a small part of the RF spectrum and sends the data as a stream of complex samples to the computer.
-To perform sidechannel analysis using these signals, the samples (time span) corresponding to the execution of the test program has to extracted from the raw stream.
+To perform side-channel analysis using these signals, the samples (time span) corresponding to the execution of the test program has to extracted from the raw stream.
 So an algorithm is needed to detect the execution of a test program.
 For simplicity it is assumed, that there are no other programs with a noticable CPU load running.
 
@@ -59,7 +59,7 @@ Some frequencies show high response, if the offset of the wavelet matches the of
 These frequencies with a high response can be used as a trigger signal.
 By searching for the maximum ins this transformed signal, the best trigger frequency can be determined.
 
-This method can also be used to scan the complete spectrum to find sidechannel leakage for a new device.
+This method can also be used to scan the complete spectrum to find side-channel leakage for a new device.
 The image shows the wavelet response for an Arduino Mega2560 from 1MHz - 13MHz.
 As an upconverter was used, the frequency values have a constant offset of 125MHz.
 The spike at 2.5MHz might be caused either by resonance of the used antenna or by the device itself.

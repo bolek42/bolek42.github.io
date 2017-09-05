@@ -1,7 +1,7 @@
 ## SDR as a Side-Channel Attack Platform
 
 Here you can find a more detailed description of the [rsa-sdr](https://github.com/bolek42/rsa-sdr) project.
-It's focus is to perform sidechannel analysis using a Software Defined Radio.
+It's focus is to perform side-channel analysis using a Software Defined Radio.
 
 ## Introduction (introduction.html)
 A small introduction on Electrical Emanation Attacks. [more](introduction.html)
