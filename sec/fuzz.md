@@ -26,8 +26,9 @@ For programs such as avconv, which is a 45MB binary, these bitmaps can get very 
 For easy processing, this bitmap is parsed as an integer that also allows further processing.
 Let t be a bitmap of a specific testcase and c the total coverage:
 
+|--------------|-------------------------------|
 | c &#124; t   | the total coverage of c and t |
-| (c ^ t) & ~c | New blocks hit by t |
+| (c ^ t) & ~c | New blocks hit by t           |
 
 In addition to code coverage, clang also suports the ASAN address sanitizer.
 This one will stop the program, if any invalid memory access is detected.
@@ -50,9 +51,6 @@ To generate a new testcase, new mutations are simply added to this list.
 This has the advantage, that combining mutations of different test cases is easy as combining two lists.
 
 # Results
-I mostly focused on libav fuzzing, as this yielded the most bugs.
-Here are the results:
-
 ### libav
 [951](https://bugzilla.libav.org/show_bug.cgi?id=951)
 [952](https://bugzilla.libav.org/show_bug.cgi?id=952)

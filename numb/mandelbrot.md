@@ -5,7 +5,7 @@ This series can either converge or diverge.
 It can be shown, that if a intermediate value is grater then 2, the series will diverge.
 The colour indicates, how many steps are required, until divergence can be detected.
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=z_n=z_{n-1}^2&space;&plus;&space;c" target="_blank"><img src="https://latex.codecogs.com/gif.latex?z_n=z_{n-1}^2&space;&plus;&space;c" title="z_n=z_{n-1}^2 + c" width="10%" /></a>
+$$ _n=z_{n-1}^2 + c $$
 
 # Manipulating z0
 
