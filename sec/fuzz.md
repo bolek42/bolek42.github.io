@@ -13,7 +13,26 @@ For open source software it is often possible to get some sort of feedback or me
 One approach is to use codecoverage.
 A large bitmap is generated, wheras each bit is associated with one basic block in the code.
 If the basic block is hit, the corresponding bit is set to 1 and 0 otherwise.
-Such a bitmap can greatly improove the performance of a fuzzer (e.g. AFL uses the same approach)
+Such a bitmap can greatly improove the performance of a fuzzer (e.g. AFL uses the same approach).
+Free software can be compiled with e.g. clang which already supports code coverage.
+
+```{r, engine='bash'}
+clang -fsanitize=address -fsanitize-coverage=bb
+export ASAN_OPTIONS="coverage=1:coverage_bitset=1"
+```
+
+If the ASAN_OPTIONS environment variable is set correctly, a $binary.$pid.bitset-sancov is created containing the coverage bitmap as a long string with '0' and '1'.
+For programs such as avconv, which is a 45MB binary, these bitmaps can get very large like 450.000 bit.
+For easy processing, this bitmap is parsed as an integer that also allows further processing.
+Let t be a bitmap of a specific testcase and c the total coverage:
+
+| c &#124; t   | the total coverage of c and t |
+| (c ^ t) & ~c | New blocks hit by t |
+
+In addition to code coverage, clang also suports the ASAN address sanitizer.
+This one will stop the program, if any invalid memory access is detected.
+A detailed error message will be printed to stdout, that can be parsed, by the calling process.
+
 
 # Seed Files
 My first target for fuzzing was libav and other video encoders, therefore I needed a huge set of files for a initial coverage.
