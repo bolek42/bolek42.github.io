@@ -62,7 +62,7 @@ By searching for the maximum ins this transformed signal, the best trigger frequ
 This method can also be used to scan the complete spectrum to find side-channel leakage for a new device.
 The image shows the wavelet response for an Arduino Mega2560 from 1MHz - 13MHz.
 As an upconverter was used, the frequency values have a constant offset of 125MHz.
-The spike at 2.5MHz might be caused either by resonance of the used antenna or by the device itself.
+The spike at 3.5MHz might be caused either by resonance of the used antenna or by the device itself.
 Even though this would be a great starting point for further analysis.
 
 ![alt tag](images/arduino-scan.jpg)

@@ -1,5 +1,10 @@
 ## Leakage
 
+Also embedded devices are vulnerable to EM attacks.
+A smaller loop antenna can be used to pick up such signals.
+
+![alt tag](images/setup-arduino.jpg)
+
 By using the method for finfing trigger frequencies, we can scan the spectrum to search for side-channel leakage for a new device.
 Most of the leakage is located between 3MHz - 4MHz.
 I'm currently not shure if this is a characteristic of the Arduino or just the resonance frequency of the Antenna.
