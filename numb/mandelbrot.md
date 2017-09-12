@@ -38,9 +38,14 @@ Sweeping the imaginary part of z0 from -1.2 to 1.2
 
 # Rotating
 
-Lets call c.i the imaginary and c.r the real part of c.
-A Point in the 4-D Mandelbrot space including the z0 starting value can then be written as (c.r, c.i, z0.r, z0.i).
-Instead of viewing the mandelbrot in the c.r c.i plane, we can also try to rotate this.
-A normal mandelbrot will use (1,0,0,0) for the X axis and (0,1,0,0) for the Y axis.
-But we are free to chose any rendering plane we want to.
-In this case I used (cos(phi),0,sin(phi)) for the X axis and (0,cos(phi),0,sin(phi)) for the Y axis.
+Lets call $c.i$ the imaginary and $c.r$ the real part of $c$.
+A Point in the 4-D Mandelbrot space including the z0 starting value can then be written as $(c.r, c.i, z0.r, z0.i)$.
+A normal mandelbrot will use the direction vector (1,0,0,0) for the X axis and (0,1,0,0) for the Y axis.
+Instead of viewing the mandelbrot in the $c.r$ $c.i$ plane, we can also try to rotate this plane.
+In this case starting from a fixed point, I used $X=(cos(\phi),0,sin(\phi))$ and $Y=(0,cos(\phi),0,sin(\phi))$ to drwa the mandelbrot image".
+
+Sweeping $\phi$ from 0 to $\pi$ with $(1,0,0,0)$ as start:
+<video width="100%" controls>
+  <source src="vid/phi-offcenter.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
