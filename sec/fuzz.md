@@ -42,7 +42,7 @@ Let t be a bitmap of a specific testcase and c the total coverage:
 
 | Expression   | | Description                   |
 |--------------|-|-------------------------------|
-| c &#124; t   | | the total coverage of c and t |
+| c &#124; t   | | The total coverage of c and t |
 | (c ^ t) & ~c | | New blocks hit by t           |
 
 In addition to code coverage, clang also suports the ASAN address sanitizer, which will stop the program, if any invalid memory access is detected.
