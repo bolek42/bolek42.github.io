@@ -15,6 +15,13 @@ Most likely, the time resolution of the spectrogram is too low, to get a good co
 The next attempt was done by using a demodulated time series signal.
 A new static alignment was implemented, that works on time series signal was implemented.
 
+I've selected a carrier close to the clock frequency at 16.253MHz, applied a low pass filter with 233kHz bandwidth and amplitude demodulated the signal.
+The resulting signal has a lot of high frequency components and thus it looks a bit noisy.
+Even though after 6022 traces the noise still remains, so it is actually caused by the CPU and could contain sidechannel information.
+
+
+![alt tag](images/des-mean-osr-666.jpg)
+
 ## Breaking DES
 A good method for breaking DES with a power analysis is the so called Correlation Power Analysis.
 It uses the fact that a XOR operation with 1 (aka bit flip) uses more power than xor with 0.
