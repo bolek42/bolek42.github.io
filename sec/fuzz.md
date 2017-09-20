@@ -2,7 +2,6 @@
 There are tons of fuzzers out there and also very good ones such as AFL, so why did I write my own one?
 First of all I learned a lot, while doing so and second if everyone uses the same fuzzer, everyone will find the same bugs.
 
-
 ### libav
 [951](https://bugzilla.libav.org/show_bug.cgi?id=951)
 [952](https://bugzilla.libav.org/show_bug.cgi?id=952)
@@ -50,7 +49,7 @@ A detailed error message is printed to stderr, that can be parsed, by the callin
 The best way to detect a new crash is to use the rip of the crash, but this wil interfere with ASLR.
 Therefore it is required to disable ASLR on the fuzzing machine, so a dedicated fuzzing machine is required.
 
-Compiling programs with clang, code coverage and asan is sometimes a struggle and sometimes a challenge.
+Compiling programs with clang, code coverage and asan is sometimes a struggle.
 For a lot of programs or libraries, it is sufficient to set the following environment variables:
 
 ```
@@ -61,22 +60,22 @@ export CXXFLAGS=-fsanitize=address -fsanitize-coverage=edge
 export LDFLAGS=-Wc -fsanitize=address -fsanitize-coverage=edge
 ```
 
-The basic concept of coverage guided fuzzing is based on a genetic algorithm, to increase code coverage.
-We start with a single seed file in the population and start mutating them, e.g. flipping bits.
-The total coverage of the population is hold as a global state.
+The basic concept of coverage guided fuzzing is based on a genetic algorithm to increase code coverage.
+We start with a single seed file in the population and the total coverage of the population is hold as a global state.
 A random element from the population is picked, mutated and the coverage is measured.
 If a mutation hits a new basic block, the testcase is added to the population and the total coverage is increased.
 This process is repeated over and over again until it is terminated by the user.
 
 # Seed Files
+A good set of seed files with a high initial coverage is needed to get good fuzzing results.
 My first target for fuzzing was libav and other video encoders, therefore I needed a huge set of files for a initial coverage.
-I downloaded all files from samples.mplayerhq.hu and started to compute the code coverage for each individual file.
+I downloaded all sample files from samples.mplayerhq.hu and started to compute the code coverage for each individual file.
 As I started fuzzing them I realized, that most of them are way too big to be a good fuzzing seed.
-So for a preprocess step, I cut every file down to 1s using the same encoding.
+So for a preprocess step, I cut every file down to 1s using the same encoding and remeasured the coverage.
 
 The next task is to find a subset of files, with a maximum coverage.
 We do not need an exact solution or a highly efficient algorithm as the main overhead is the coverage measurements.
-The following pseudocode is used to select the $count best testcases with a good coverage.
+The following pseudocode is used to select the count best testcases with high total coverage.
 
 ```
 while len(seeds) > count:

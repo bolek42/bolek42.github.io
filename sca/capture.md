@@ -20,16 +20,20 @@ The following image shows such a trigger signal, wheras the individual execution
 
 ![alt tag](images/trigger-signal.jpeg)
 
-In this case, the start and end of the execution could simply be determined by using a static threshold, even though this method is not very robust as oher programs can cause small spikes in the signal,
+In this case, the start and end of the execution could simply be determined by using a static threshold, even though this method is not very robust as oher programs or interference can cause small spikes in the signal.
 A more robust method would be to use a Haar-Wavelet (slope), that will be multiplied with the trigger signal on different positions.
 The wavlelet response is the total integral of the obtained signal.
-As the wavelet has a total integral of zero, it generates a high absolute response if te position of the wavelet matches a slope in the signal.
+This wavelet is convoluted with the signal, wheras the convolution is defined as follows, wheras k is the offset:
+
+$$ conv_{ab}[k] = \sum_i a[i+k]b[i] $$
+
+As the wavelet has a total integral of zero, it generates a high absolute response if the position of the wavelet matches a slope in the signal.
 
 ![alt tag](images/haar.svg)
 
-As the Haar-Wavelet has a rectangular shape, it can be cumputed very efficiently.
+The Haar-Wavelet has a rectangular shape, so it can be cumputed very efficiently.
 First the trigger signal is integrated once.
-The wavelet response can be computed by adding and substracting the corresponding samples to compute the wavelet response.
+The wavelet response can be computed by adding and substracting the corresponding samples.
 The width of the solpe is chosen in a way, that it matches the estimated width of the execution.
 The following image shows the resulting response (absolute value) for the wavelet response for the trigger signal.
 
@@ -59,11 +63,23 @@ Some frequencies show high response, if the offset of the wavelet matches the of
 These frequencies with a high response can be used as a trigger signal.
 By searching for the maximum ins this transformed signal, the best trigger frequency can be determined.
 
-This method can also be used to scan the complete spectrum to find side-channel leakage for a new device.
-The image shows the wavelet response for an Arduino Mega2560 from 1MHz - 13MHz.
+This method can also be used to scan the spectrum to find side-channel leakage for a new device.
+The image shows the wavelet response for an Arduino Mega2560 (16MHz processor) from 0MHz - 45MHz.
 As an upconverter was used, the frequency values have a constant offset of 125MHz.
-The spike at 3.5MHz might be caused either by resonance of the used antenna or by the device itself.
-Even though this would be a great starting point for further analysis.
+Interestingly there are also lots of side channel effects in the 30MHz-40MHz, twice as high as the CPU clock.
+The actual response also depends on the resonance frequency of the antenna.
 
-![alt tag](images/arduino-scan.jpg)
+![alt tag](images/arduino-scan-hf.jpg)
 
+
+## Static Alignment
+Event though the trigger algorithm extracts traces reliable, there is still some missalignment.
+One reason for this is that the trigger signal has a lower sampling rate than the demodulated signal, so a fine grained alignment method is required.
+The first trace is used as an reference and further traces are aligned using convolution with this trace.
+It is important, that both traces are zero mean, otherwise, the result ist influenced too much by the number of samples.
+With low bandwith time series traces, this method works well without too much overhead.
+
+![alt tag](images/staticalignment-convolution.jpg)
+
+This image shows the convolution of two misaligned traces.
+The offset is clearly visible as the maximum response.

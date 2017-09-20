@@ -48,7 +48,7 @@ Sweeping $\phi$ from 0 to $\pi$ with $(1,0,0,0)$ as start:
   Your browser does not support the video tag.
 </video>
 
-#Implementation
+# Implementation
 The Implementation is using OpenCL for computing the mandelbrot values and GLUT for drawing the image ([source](mandelbrot-4d.tar.gz))
 The folling key mappings are used to controll the Mandelbrot:
 
