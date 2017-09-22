@@ -73,4 +73,4 @@ Further analysis of this Dell Optiplex showed an interesting side-channel leakag
 The following spectrogram shows OpenSSL multiplications encapsulated by dummy operations (tight for loop)
 It seems that the side-channel effects are frequency modulated on some carrieres.
 
-![alt tag](images/idle-busy.jpg)
+![alt tag](images/dell-mul-raw.jpg)
