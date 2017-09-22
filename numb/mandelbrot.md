@@ -37,10 +37,10 @@ Sweeping the imaginary part of $z_0$ from -1.2 to 1.2
 
 # Rotating
 Lets call $c.i$ the imaginary and $c.r$ the real part of $c$.
-A Point in the 4-D Mandelbrot space including the z0 starting value can then be written as $(c.r, c.i, z0.r, z0.i)$.
+A Point in the 4-D Mandelbrot space including the $z_0$ starting value can then be written as $(c.r, c.i, z_0.r, z_0.i)$.
 A normal mandelbrot will use the direction vector (1,0,0,0) for the X axis and (0,1,0,0) for the Y axis.
 Instead of viewing the mandelbrot in the $c.r$ $c.i$ plane, we can also try to rotate this plane.
-In this case starting from a fixed point, I used $X=(cos(\phi),0,sin(\phi))$ and $Y=(0,cos(\phi),0,sin(\phi))$ to drwa the mandelbrot image.
+In this case starting from a fixed point, I used $X=(cos(\phi),0,sin(\phi),0)$ and $Y=(0,cos(\phi),0,sin(\phi))$ to drwa the mandelbrot image.
 
 Sweeping $\phi$ from 0 to $\pi$ with $(1,0,0,0)$ as start:
 <video width="100%" controls>
@@ -50,7 +50,7 @@ Sweeping $\phi$ from 0 to $\pi$ with $(1,0,0,0)$ as start:
 
 # Implementation
 The Implementation is using OpenCL for computing the mandelbrot values and GLUT for drawing the image ([source](mandelbrot-4d.tar.gz))
-The folling key mappings are used to controll the Mandelbrot:
+The following key mappings are used to controll the Mandelbrot:
 
 
 | Key    | | Meaning                                                        |
