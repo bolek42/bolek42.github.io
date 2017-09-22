@@ -31,7 +31,7 @@ A small Loop antenna is used to pick up electrical emmanations caused by the dev
 
 ![alt tag](images/setup-arduino.jpg)
 
-## [Pickups]
+## Pickups
 The most experiments are done with loop antennas or 'magnetic field probes'.
 Instead of buying professional ones, I build them my self using of the shelf coax cable.
 The construction is fairly simple: a small section of the shielding is removed at the middle of the cable and on one side the core is connected with the shielding.
