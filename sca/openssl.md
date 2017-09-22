@@ -96,9 +96,9 @@ Not that if $D[i] = 1$ we have effectively a multiplication with a randomour and
 For a 2048 bit number, this means we have $2048/5 = 410$ iterations of the for loop and $410 / 2^{32} = 12$ multiplications with our attacker controlled input in average.
 This is much fewer than the in the previous experiments, but with ca. 400 traces we can observer differences.
 
-![alt tag](images/dell-mul-exp-unequal.jpg)
+![alt tag](images/dell-exp-unequal.jpg)
 
-![alt tag](images/dell-mul-exp-equal.jpg)
+![alt tag](images/dell-exp-equal.jpg)
 
 ## RSA Crt
 
