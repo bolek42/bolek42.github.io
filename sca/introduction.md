@@ -18,7 +18,7 @@ With a static view of such a gate, there should be no current flowing through th
 Even though if a gate output changes its value and thereby its voltage, there are two effects, that causes a short current flow:
 
 1. For a short period, both transistors are partially conductive
-2. The tiny capacitance between surrounding wires has to be charged or discharge
+2. The tiny capacitance between surrounding wires has to be charged or discharged
 
 This leads to the Hamming-Distance model of Power consumption, that the powerconsumption of CMOS gate is proportional to the number of flipping bits.
 
@@ -66,11 +66,6 @@ while 1:
 ```
 The program 'uhd_fft' or 'osmocom_fft' from the GNURadio toolchain can be used to visualize the RF spectrum.
 As we can see, there are obvious differences in the spectrogram caused by the change of the CPU load.
+The same behaviour can also be observed on other devices, and is used to detect the execution of the test program.
 
 ![alt tag](images/idle-busy.jpg)
-
-Further analysis of this Dell Optiplex showed an interesting side-channel leakage.
-The following spectrogram shows OpenSSL multiplications encapsulated by dummy operations (tight for loop)
-It seems that the side-channel effects are frequency modulated on some carrieres.
-
-![alt tag](images/dell-mul-raw.jpg)

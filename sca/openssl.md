@@ -92,27 +92,47 @@ function m_array_exp(c,d,N) // c^d mod N
     return r
 ```
 
-Not that if $D[i] = 1$ we have effectively a multiplication with a randomour and $c ^ 1$ our attacker controlled input.
-For a 2048 bit number, this means we have $2048/5 = 410$ iterations of the for loop and $410 / 2^{32} = 12$ multiplications with our attacker controlled input in average.
+Not that if $D[i] = 1$ we have effectively a multiplication with a random number and $c ^ 1$, our attacker controlled input.
+For a 2048 bit exponentiation, this means we have $2048/5 = 410$ iterations of the for loop and $410 / 2^{32} = 12$ multiplications with our attacker controlled input in average.
 This is much fewer than the in the previous experiments, but with ca. 400 traces we can observer differences.
+But even though, it is enough to cause measurable sidechannel effects.
 
 ![alt tag](images/dell-exp-unequal.jpg)
 
 ![alt tag](images/dell-exp-equal.jpg)
 
-## RSA Crt
+## RSA CRT
+In contrast to normal RSA encryption, which is simpy the computation of $m = c ^ d \mod N$ an optimization using the chineese remainder theorem is used, which is up to 4 times faster than the regular RSA computation.
+The most important difference from the attacker point of view is that the extraction of the modul would also be sufficient to break RSA.
 
-This behavior can be used to mount a binary search on the modul of the exponentiation routine.
-As RSA is usually computed by using the chineese rainder theorem, this yields to the extraction of one of the primes $p$ or $q$.
+$$ c_p &= c^{d \mod (p-1)} \mod \textcolor{red}{p} $$
+$$ c_q &= c^{d \mod (q-1)} \mod \textcolor{red}{q} $$
+$$ m &= ( (q^{-1} \mod p) (c_p - c_q) \mod p)q + c_q $$
+
+The behaviour described above can be used to mount a binary search on the modul of the exponentiation routine.
+Using the DPA as an oracle to compare any given number with the modul, the pseudo code for the attack is straight forward.
+Even though in practice, the error rate of such an oracle has to be very low, as a single error will cause the attack to fail as all following bits will be wrong.
+To increase stability, all non relevant parts of the spectrogram were masked, so 176 bits could be extracted in 5h using 400 traces for the DPA.
+As the measurements of the reference could be reused, only 200 traces has to be recorded for each bit.
+
 
 ```
 reference = 0b111110.... //deffenetly > p
 secret = 0
 for i = (n-1)..0
     if DPA(secret + 2^i, reference) > x
-        secret += 2^i //secret + (2^i) < p
+        secret += 2^i              //secret + (2^i) < p
     else
-        continue      //secret + (2^i) > p
+        reference = secret + 2^i   //secret + (2^i) > p
 
 return secret
 ```
+
+The following video shows a run of a modul extraction on the Dell Optiplex.
+
+<video width="100%" controls>
+  <source src="vid/crt-extract.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+
