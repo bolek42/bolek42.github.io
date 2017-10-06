@@ -34,7 +34,7 @@ A good method for breaking DES with a power analysis is the so called Correlatio
 Its most advantage in comparison to Differential Power Analysis (DPA) is, that we can correlate the power consumption with any arbitrary function.
 It makes use of the person correlation which looks as follows:
 
-$$ corr(X,Y) = \frac{n \sum_i x_i y_i - \sum_i x_i \sum_i y_i }{\sqrt{n \sum_i x_i^2 - (\sum_i x_i)^2} \sqrt{n \sum_i y_i^2 - (\sum_i y_i)^2}} $
+$$ corr(X,Y) = \frac{n \sum_i x_i y_i - \sum_i x_i \sum_i y_i }{\sqrt{n \sum_i x_i^2 - (\sum_i x_i)^2} \sqrt{n \sum_i y_i^2 - (\sum_i y_i)^2}} $$
 
 This formular looks very complicatie but gives the correct result and we only have to keep track of the number of traces and the sum of $x_i$, $x_i^2$, $x_iy_i$, $y_i$ and $y_i^2$.
 The correlation coefficient can then be easily computed at any time using the formular above.
