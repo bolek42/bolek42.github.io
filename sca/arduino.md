@@ -29,21 +29,29 @@ Even though after 6022 traces this noise still remains, so it is actually caused
 
 ![alt tag](images/des-mean-osr-666.jpg)
 
-## Breaking DES
+## Breaking DES using CPA
 A good method for breaking DES with a power analysis is the so called Correlation Power Analysis.
-It uses the fact that a XOR operation with 1 (aka bit flip) uses more power than xor with 0.
-Depending on the challenge, the Number of bit flips is predicted and directly correlated (using pearson correlation) with the power consumption.
-The important part of the DES is the application of the sbox in the first round.
+Its most advantage in comparison to Differential Power Analysis (DPA) is, that we can correlate the power consumption with any arbitrary function.
+It makes use of the person correlation which looks as follows:
+
+$$ corr(X,Y) = \frac{n \sum_i x_i y_i - \sum_i x_i \sum_i y_i }{\sqrt{n \sum_i x_i^2 - (\sum_i x_i)^2} \sqrt{n \sum_i y_i^2 - (\sum_i y_i)^2}} $
+
+This formular looks very complicatie but gives the correct result and we only have to keep track of the number of traces and the sum of $x_i$, $x_i^2$, $x_iy_i$, $y_i$ and $y_i^2$.
+The correlation coefficient can then be easily computed at any time using the formular above.
+
+In the case of DES we uses the fact that a XOR operation with 1 (aka bit flip) uses more power than xor with 0.
+Depending on the challenge, the Number of bit flips is predicted and directly correlated with the power consumption.
+The important part of the DES is the application of the sbox in the first (or last) round.
 
 $$ r = r \oplus sbox_i[l \oplus k_i] $$
 
 $l$ and $r$ are parts of the plaintext and can be controlled by the attacker, $k_i$ is a 6 bit subkey for the $i$-th sbox which is a nonlinear lookup table.
 The number of bit flips depends on a part of the plaintext and a part of the key.
-The attack now correlates the hamming weight of the output of the sbox with the actually measured power consumption.
+We now correlate the hamming weight of the output of the sbox with the actually measured power consumption.
 
 $$ corr(s_t, ham(sbox_i[r \oplus k_i])) $$
 
-This pearson correlation is computed for all possible 64 subkeys and every timestep of the power trace.
+This correlation is computed for all possible 64 subkeys and every timestep of the power trace.
 For the right subkey, we expect a high correlation with the actual measured sample $s_t$ exactly at the point, where the sbox operation happens.
 The following image shows the correlation for the correct subkey of the first sbox (black) and the mean trace (gray) after 6022 traces.
 The spike (high correlation) in the beginning of the DES routine is caused by the xor operation with the sbox output.

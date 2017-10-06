@@ -105,9 +105,9 @@ But even though, it is enough to cause measurable sidechannel effects.
 In contrast to normal RSA encryption, which is simpy the computation of $m = c ^ d \mod N$ an optimization using the chineese remainder theorem is used, which is up to 4 times faster than the regular RSA computation.
 The most important difference from the attacker point of view is that the extraction of the modul would also be sufficient to break RSA.
 
-$$ c_p &= c^{d \mod (p-1)} \mod \textcolor{red}{p} $$
-$$ c_q &= c^{d \mod (q-1)} \mod \textcolor{red}{q} $$
-$$ m &= ( (q^{-1} \mod p) (c_p - c_q) \mod p)q + c_q $$
+$$ c_p = c^{d \mod (p-1)} \mod p $$
+$$ c_q = c^{d \mod (q-1)} \mod q $$
+$$ m = ( (q^{-1} \mod p) (c_p - c_q) \mod p)q + c_q $$
 
 The behaviour described above can be used to mount a binary search on the modul of the exponentiation routine.
 Using the DPA as an oracle to compare any given number with the modul, the pseudo code for the attack is straight forward.
@@ -117,7 +117,7 @@ As the measurements of the reference could be reused, only 200 traces has to be 
 
 
 ```
-reference = 0b111110.... //deffenetly > p
+reference = 0b111110.... //definitely > p
 secret = 0
 for i = (n-1)..0
     if DPA(secret + 2^i, reference) > x
