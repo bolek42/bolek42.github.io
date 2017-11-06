@@ -11,3 +11,10 @@ The preassure can be regulated with a needle valve, what usually is used for CO2
 
 
 ![alt tag](images/iongun.jpg)
+
+The first test were very prommising, weheras the vacuum wasn't ideal.
+In fact I wasn't able to open the valve even a bit as the preasure would increase too much.
+The main problem was most likely, that the vacuum fittings were slightly dirty or had minor scratches, what could be fixed using vacuum grease.
+Event though anode rays are clearly visible.
+
+![alt tag](images/ionray.jpg)
