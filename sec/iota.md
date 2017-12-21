@@ -29,7 +29,7 @@ And the sigature can be verified by testing if
 $$ pk_i = h^{b_i}(sig_i) $$
 
 This scheme can adopted for multi byte signatures by choosing a different $x_i$ for every byte $b_i$.
-Of course this basic method is not secure at all, as an attacker can sign all bytes $b'_i > b_i$.
+Of course this basic method is not secure at all, as an attacker can sign all bytes $b'_i < b_i$.
 The way IOTA handles this problem is to normalize the bytestring $B = (b_0, b_1, ... b_n)$ by changing the first bytes such that:
 
 $$ \sum_i b_i = 128 $$
@@ -37,7 +37,7 @@ $$ \sum_i b_i = 128 $$
 As IOTA uses trytes and not bytes this is slightly different in that case.
 If an attacker wants to sign a different bytestring, she has to choose a different bytestring $B' \not= B$.
 As the total sum is constant there will be at least two bytes such that $b'_i < b_i$ and $b'_j > b_j$.
-To sign this bytestring $B'$ using a different signature, the attacker has to compute a preimage for b'_i$ what is not possible in practice.
+To sign this bytestring $B'$ using a different signature, the attacker has to compute a preimage for $b'_j$ what is not possible in practice.
 Even though this assumption only holds if the public key is only used once.
 
 IOTA uses trits (-1,0,1) and trytes (group of 3 trits, 9,A-Z) to represent hash values.
@@ -65,7 +65,7 @@ Luckily IOTA ships with an open source python implementation.
 The iota.crypto.signing.validate_signature_fragments(...) can be used to check signatures in the tangle.
 The pseudo code looks as follows (taken from iota.lib.py/iota/crypto/signing.py):
 
-```
+```python
 def get_sk_fragments(fragments, hash, public_key):
   normalized_hash = normalize(hash)
 
@@ -82,19 +82,17 @@ def get_sk_fragments(fragments, hash, public_key):
         sk_fragments[i*27 + j][normalized_chunk[j]-i-1] = buffer
 
       outer.append(buffer)
-
     checksum.append( h(outer))
 
-  actual_public_key = h(checksum)
 
-  return actual_public_key == public_key.as_trits()
+  return  h(checksum) == public_key.as_trits()
 ```
 
 Note that there is a small modification, the update of sk_fragments, which keeps track of the intermediate values of the Winternitz values.
 Using the known values of two or more signatures, own signatures can be forged.
 If a particular intermediate value is not known, an IndexError is thrown and the signature generation fails.
 
-```
+```python
 def sign(forged_hash, sk_fragments, num_frags = 2):
     normalized_hash = normalize(forged_hash)
 
@@ -115,7 +113,7 @@ In the IOTA protocol the bundle hash is a hash value of a bundle, an actual mone
 Even though random values can be signed if only two signatures are known.
 This can be achieved by slightly mutating a known signature.
 
-```
+```python
 import random
 def mutate(x, n=26):
     x = x.as_trits()
