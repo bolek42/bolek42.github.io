@@ -59,6 +59,16 @@ The most relevant fields are:
     -bundle_hash: The hash of the signed bundle.
 
 This database can then be used to search for addresses that signed multiple bundles.
+I've analyzed transactions of 27682 addresses (24.10.2016-10.12.2017) and 1425 have submitted multiple signatures!
+
+| Signatures | Found | Affected MIOTA
+----------------------------------
+| 2          | 1313  | 925.682126
+| 3          | 73    | 0.0037
+| 4          | 24    | 1.279097
+| 5          | 8     | ~0
+| 6          | 2     | ~0
+| 7          | 2     | ~0
 
 # Forging Signatures
 Luckily IOTA ships with an open source python implementation.
@@ -66,8 +76,8 @@ The iota.crypto.signing.validate_signature_fragments(...) can be used to check s
 The pseudo code looks as follows (taken from iota.lib.py/iota/crypto/signing.py):
 
 ```python
-def get_sk_fragments(fragments, hash, public_key):
-  normalized_hash = normalize(hash)
+def get_sk_fragments(fragments, bundle_hash, public_key):
+  normalized_hash = normalize(bundle_hash)
 
   for (i, fragment) in enumerate(fragments): # for all signature fragments
     normalized_chunk = normalized_hash[i % len(normalized_hash)]
@@ -125,6 +135,21 @@ def mutate(x, n=26):
 ```
 
 # Estimating Bit Security
+To estimate the bit security I made one assumption, that the signed hash is purely random.
+Of course as the hash is normalized this is not true in practice.
+Let $b'_i$ be the forged and $b^j_i$ the legitimate signature and assume that the propability of finding a signature is:
+
+$$ P = \prod_i P(b'_i > Max_j(b^j_i)) $$
+
+I've written a small program to verify the estimation and they seem to be a little bit off.
+The actual number of attempts strongly depends on the signatures, how many hash values are revealed.
+A rough estimation is
+
+| Num Sigs | Estimated Bit Security |
+-------------------------------------
+| 2        | ~50 bit                |
+| 3        | ~30 bit                |
+
 
 # PoC
 The repository  [bolek42/iotaWayBack](https://github.com/bolek42/iotaWayBack.git) implements a basic PoC for the problems above.
