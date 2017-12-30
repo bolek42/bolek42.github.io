@@ -18,6 +18,10 @@ First of all I learned a lot, while doing so and second if everyone uses the sam
 [1017](https://bugzilla.libav.org/show_bug.cgi?id=1017)
 [1018](https://bugzilla.libav.org/show_bug.cgi?id=1018)
 
+In fact the bug [952](https://bugzilla.libav.org/show_bug.cgi?id=952) (uninitialized pointer) also triggered in ffmpeg.
+Sadly I did not checked it against any browser, so I noticed later that Chromium was also affected.
+One bug hits three projects so I decided to request a CVE and here it is: CVE-2017-1000460
+
 
 # Coverage Guided Fuzzing
 By just mutating the file blindly, without any feedback, is called 'dumb fuzzing'.
@@ -92,3 +96,9 @@ Each mutation is descibed as a json which holds type and offset of the mutation.
 Instead of saving the mutated binary data for each testcase, only the list of mutations is saved.
 To generate a new testcase, new reandom mutations are added to this list.
 
+This method allows for merging mutations by selecting a random subset of two testcases.
+The idea is to recombine known mutations that itself increased code coverage.
+This way of merging seems to work quite well as somtime a whole bunch of new code blocks are discovered at once.
+
+The propability of mutating a testcase $i$ is $P = n_i / N$ wherase $N$ is the total amount of discovered and $n_i$ the new blocks found by testcase $i$.
+This focus the workload to testcases that really improved code coverage and are more likely to hit new blocks due to undiscovered code.
