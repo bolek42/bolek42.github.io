@@ -61,14 +61,14 @@ The most relevant fields are:
 This database can then be used to search for addresses that signed multiple bundles.
 I've analyzed transactions of 27682 addresses (24.10.2016-10.12.2017) and 1425 have submitted multiple signatures!
 
-| Signatures | Found | Affected MIOTA
-----------------------------------
-| 2          | 1313  | 925.682126
-| 3          | 73    | 0.0037
-| 4          | 24    | 1.279097
-| 5          | 8     | ~0
-| 6          | 2     | ~0
-| 7          | 2     | ~0
+| Signatures | Found | Affected MIOTA |
+|------------|-------|----------------|
+| 2          | 1313  | 925.682126     |
+| 3          | 73    | 0.0037         |
+| 4          | 24    | 1.279097       |
+| 5          | 8     | ~0             |
+| 6          | 2     | ~0             |
+| 7          | 2     | ~0             |
 
 # Forging Signatures
 Luckily IOTA ships with an open source python implementation.
@@ -146,7 +146,7 @@ The actual number of attempts strongly depends on the signatures, how many hash 
 A rough estimation is
 
 | Num Sigs | Estimated Bit Security |
--------------------------------------
+|----------|------------------------|
 | 2        | ~50 bit                |
 | 3        | ~30 bit                |
 
