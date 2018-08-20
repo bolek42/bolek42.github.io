@@ -4,43 +4,141 @@
   {% seo %}
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <style>img {width: 100%;}</style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script type="text/x-mathjax-config">
     MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
   </script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
   </script>
 </head>
+
+
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
 ga('create', 'UA-105855746-1', 'auto');
 ga('send', 'pageview');
 </script>
 
+
+<style>
+.imgLeft {float: left; width: 30%;}
+.imgRight {float: right; width: 30%;}
+.imgCenter {width: 100%;}
+</style>
+
+
 <body>
-  <center><h1><a href="/" class="w3-bar-item w3-button">A Small Collection of Random Projects</a></h1></center><hr>
+  <center><h2>A Small Collection of Random Projects</h2></center><hr>
   <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:15%">
-    <h3 class="w3-bar-item">Security Related</h3>
-      <a href="/sec/fuzz.html" class="w3-bar-item w3-button">Fuzzing</a>
-    <h3 class="w3-bar-item"><a href="/sca/index.html">Side-Channel Attacks & SDR</h3>
-      <a href="/sca/introduction.html" class="w3-bar-item w3-button">Introduction</a>
-      <a href="/sca/capture.html" class="w3-bar-item w3-button">Capture</a>
-      <a href="/sca/openssl.html" class="w3-bar-item w3-button">OpenSSL</a>
-      <a href="/sca/arduino.html" class="w3-bar-item w3-button">Arduino</a>
-    <h3 class="w3-bar-item">Physics</h3>
-      <a href="/phy/vac.html" class="w3-bar-item w3-button">Vacuum</a>
-      <a href="/phy/hv.html" class="w3-bar-item w3-button">High Voltage</a>
-    <h3 class="w3-bar-item">Other</h3>
-      <a href="/numb/mandelbrot.html" class="w3-bar-item w3-button">4D Mandelbrot</a>
+    <div onmouseover="accordionToggle('side-sec')" onmouseout="accordionPermanent()">
+      <button class="w3-button w3-block w3-left-align"  onclick="accordionTogglePermanent('side-sec')"> Security <i class="fa fa-caret-right accordion-arrow"></i> </button>
+      <div id="side-sec" class="w3-hide w3-white w3-card accordion">
+        <a href="/sec/fuzz.html" class="w3-bar-item w3-button">Fuzzing</a>
+        <a href="/sec/iota.html" class="w3-bar-item w3-button">IOTA Multisignature Problem</a>
+      </div>
+    </div>
+
+    <div onmouseover="accordionToggle('side-sca')" onmouseout="accordionPermanent()">
+      <button class="w3-button w3-block w3-left-align" onclick="accordionTogglePermanent('side-sca')"> Side-Channel Attacks & SDR <i class="fa fa-caret-right accordion-arrow"></i> </button>
+      <div id="side-sca" class="w3-hide w3-white w3-card accordion">
+        <a href="/sca/introduction.html" class="w3-bar-item w3-button">Introduction</a>
+        <a href="/sca/capture.html" class="w3-bar-item w3-button">Capture</a>
+        <a href="/sca/openssl.html" class="w3-bar-item w3-button">OpenSSL</a>
+        <a href="/sca/arduino.html" class="w3-bar-item w3-button">Arduino</a>
+      </div>
+    </div>
+
+    <div onmouseover="accordionToggle('side-phy')" onmouseout="accordionPermanent()">
+      <button class="w3-button w3-block w3-left-align"  onclick="accordionTogglePermanent('side-phy')"> Physics <i class="fa fa-caret-right accordion-arrow"></i> </button>
+      <div id="side-phy" class="w3-hide w3-white w3-card accordion">
+        <a href="/phy/hv.html" class="w3-bar-item w3-button">High Voltage</a>
+        <a href="/phy/vac.html" class="w3-bar-item w3-button">High Vacuum</a>
+        <a href="/phy/xray.html" class="w3-bar-item w3-button">Xrays</a>
+        <a href="/phy/ion.html" class="w3-bar-item w3-button">Iongun</a>
+      </div>
+    </div>
+
+    <div onmouseover="accordionToggle('side-misc')" onmouseout="accordionPermanent()">
+      <button class="w3-button w3-block w3-left-align" onclick="accordionTogglePermanent('side-misc')"> Misc <i class="fa fa-caret-right accordion-arrow"> </i></button>
+      <div id="side-misc" class="w3-hide w3-white w3-card accordion">
+        <a href="/numb/mandelbrot.html" class="w3-bar-item w3-button">4D Mandelbrot</a>
+      </div>
+    </div>
+
   </div>
 
   <div style="margin-left:25%" class="container content">
     {{ content }}
   </div>
+
+  <script>
+    function accordionToggle(id, allowPermanent=false) {
+      if (!allowPermanent && accordionGetPermanent().indexOf(id) != -1) return;
+
+      var x = document.getElementById(id);
+      if (x.className.indexOf("w3-show") == -1) x.className += " w3-show";
+      else x.className = x.className.replace(" w3-show", "");
+    }
+
+    function accordionGetPermanent() {
+      var url = window.location.href.split("#")
+      if (url.length > 1) return url[1].split(",");
+      return [];
+    }
+
+    function accordionTogglePermanent(id) {
+      var url = window.location.href.split("#")
+      var elements = (url.length > 1) ? url[1].split(",") : [];
+      elements = elements.filter(function (x) {return x != ""})
+      if (elements.indexOf(id) == -1) elements.push(id)
+      else elements = elements.filter(function (x) {return x != id})
+
+      window.location.href = url[0] + "#" + elements.join(",");
+      accordionPermanent();
+
+      var links = document.getElementsByTagName("a");
+      for (i=0; i<links.length; i++) 
+        links[i].href = links[i].href.split("#")[0] + "#" + elements.join(",");
+    }
+
+    function accordionPermanent() {
+      var elements = document.getElementsByClassName("accordion");
+
+      for (var i=0; i < elements.length; i++) {
+        var arrow = elements[i].parentElement.getElementsByClassName("accordion-arrow")[0];
+        arrow.className = arrow.className.replace(" fa-caret-right", "");
+        arrow.className = arrow.className.replace(" fa-caret-down", "");
+
+
+        if (accordionGetPermanent().indexOf(elements[i].id) != -1) {
+          elements[i].className += " w3-show";
+          arrow.className += " fa-caret-down";
+        } else {
+          arrow.className += " fa-caret-right";
+          while ( elements[i].className.indexOf(" w3-show") != -1)
+            elements[i].className = elements[i].className.replace(" w3-show", "");
+        }
+      }
+    }
+    accordionPermanent();
+
+    function makelink(classname) {
+      var elements = document.getElementsByClassName(classname)
+      for (var i=0; i<elements.length;i++) {
+        var a = document.createElement('a');
+        var par = elements[i].parentElement;
+        a.href = elements[i].src;
+        a.appendChild(elements[i]);
+        par.appendChild(a);
+      }
+    }
+    makelink("imgLeft");
+    makelink("imgRight");
+    makelink("imgCenter");
+  </script>
 
 </body>
 

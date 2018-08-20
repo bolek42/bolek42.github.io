@@ -1,6 +1,6 @@
 # Intro (In Dev)
 There are tons of fuzzers out there and also very good ones such as AFL, so why did I write my own one?
-First of all I learned a lot, while doing so and second if everyone uses the same fuzzer, everyone will find the same bugs.
+First of all, I learned a lot while doing so and second if everyone uses the same fuzzer, everyone will find the same bugs.
 
 ### libav
 [951](https://bugzilla.libav.org/show_bug.cgi?id=951)
@@ -18,19 +18,19 @@ First of all I learned a lot, while doing so and second if everyone uses the sam
 [1017](https://bugzilla.libav.org/show_bug.cgi?id=1017)
 [1018](https://bugzilla.libav.org/show_bug.cgi?id=1018)
 
-In fact the bug [952](https://bugzilla.libav.org/show_bug.cgi?id=952) (uninitialized pointer) also triggered in ffmpeg.
-Sadly I did not checked it against any browser, so I noticed later that Chromium was also affected.
+In fact, the bug [952](https://bugzilla.libav.org/show_bug.cgi?id=952) (uninitialized pointer) also triggered in ffmpeg.
+Sadly I did not check it against any browser, so I noticed later that Chromium was also affected.
 One bug hits three projects so I decided to request a CVE and here it is: CVE-2017-1000460
 
 
 # Coverage Guided Fuzzing
 By just mutating the file blindly, without any feedback, is called 'dumb fuzzing'.
 It is fairly easy to implement but is also limited in the results.
-For open source software it is often possible to get some sort of feedback or metric, if a mutation makes 'sense' to the application.
+For open source software, it is often possible to get some sort of feedback or metric if a mutation makes 'sense' to the application.
 One approach is to use codecoverage.
-A large bitmap is generated, wheras each bit is associated with one basic block in the code.
+A large bitmap is generated, whereas each bit is associated with one basic block in the code.
 If the basic block is hit, the corresponding bit is set to 1 and 0 otherwise.
-Such a bitmap can greatly improove the performance of a fuzzer (e.g. AFL uses the same approach).
+Such a bitmap can greatly improve the performance of a fuzzer (e.g. AFL uses the same approach).
 Free software can be compiled with e.g. clang which already supports code coverage.
 
 ```
@@ -48,9 +48,9 @@ Let t be a bitmap of a specific testcase and c the total coverage:
 | c &#124; t   | | The total coverage of c and t |
 | (c ^ t) & ~c | | New blocks hit by t           |
 
-In addition to code coverage, clang also suports the ASAN address sanitizer, which will stop the program, if any invalid memory access is detected.
+In addition to code coverage, clang also supports the ASAN address sanitizer, which will stop the program, if any invalid memory access is detected.
 A detailed error message is printed to stderr, that can be parsed, by the calling process, to detect an distinguish crashes.
-The best way to detect a new crash is to use the rip of the crash, but this wil interfere with ASLR.
+The best way to detect a new crash is to use the rip of the crash, but this will interfere with ASLR.
 Therefore it is required to disable ASLR on the fuzzing machine, so a dedicated fuzzing machine is required.
 
 Compiling programs with clang, code coverage and asan is sometimes a struggle.
@@ -91,14 +91,14 @@ while len(seeds) > count:
 ```
 
 # Mutations
-Mutations are used to change the input to the program, for example bitflips, arithmetic operations, inserting or duplicating known data.
+Mutations are used to change the input to the program, for example, bitflips, arithmetic operations, inserting or duplicating known data.
 Each mutation is descibed as a json which holds type and offset of the mutation.
 Instead of saving the mutated binary data for each testcase, only the list of mutations is saved.
-To generate a new testcase, new reandom mutations are added to this list.
+To generate a new testcase, new random mutations are added to this list.
 
 This method allows for merging mutations by selecting a random subset of two testcases.
 The idea is to recombine known mutations that itself increased code coverage.
-This way of merging seems to work quite well as somtime a whole bunch of new code blocks are discovered at once.
+This way of merging seems to work quite well as sometimes a whole bunch of new code blocks is discovered at once.
 
-The propability of mutating a testcase $i$ is $P = n_i / N$ wherase $N$ is the total amount of discovered and $n_i$ the new blocks found by testcase $i$.
-This focus the workload to testcases that really improved code coverage and are more likely to hit new blocks due to undiscovered code.
+The propability of mutating a testcase $i$ is $P = n_i / N$ wherease $N$ is the total amount of discovered and $n_i$ the new blocks found by testcase $i$.
+This focuses the workload to testcases that really improved code coverage and are more likely to hit new blocks due to undiscovered code.

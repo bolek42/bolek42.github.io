@@ -12,13 +12,13 @@ The following image shows a example spectrogram.
 Multiple executions of a test program are triggered (marked with arrows) with a constant delay.
 The executios are clearly distinguishable from the idle CPU state.
 
-![alt tag](images/trace-raw.jpeg)
+<img class="imgCenter" src="images/trace-raw.jpeg">
 
 In this example, as the program is executed, some carrier frequencies are interrupted.
 To detect a particular execution, one of this carriers can be filtered and amplitude demodulated to obtain a trigger signal.
 The following image shows such a trigger signal, wheras the individual executions are visible as dips in the signal.
 
-![alt tag](images/trigger-signal.jpeg)
+<img class="imgCenter" src="images/trigger-signal.jpeg">
 
 In this case, the start and end of the execution could simply be determined by using a static threshold, even though this method is not very robust as oher programs or interference can cause small spikes in the signal.
 A more robust method would be to use a Haar-Wavelet (slope), that will be multiplied with the trigger signal on different positions.
@@ -29,7 +29,7 @@ $$ conv_{ab}[k] = \sum_i a[i+k]b[i] $$
 
 As the wavelet has a total integral of zero, it generates a high absolute response if the position of the wavelet matches a slope in the signal.
 
-![alt tag](images/haar.svg)
+<img class="imgCenter" src="images/haar.svg">
 
 The Haar-Wavelet has a rectangular shape, so it can be cumputed very efficiently.
 First the trigger signal is integrated once.
@@ -37,7 +37,7 @@ The wavelet response can be computed by adding and substracting the correspondin
 The width of the solpe is chosen in a way, that it matches the estimated width of the execution.
 The following image shows the resulting response (absolute value) for the wavelet response for the trigger signal.
 
-![alt tag](images/haar-transform.jpeg)
+<img class="imgCenter" src="images/haar-transform.jpeg">
 
 To extract the n executions, a search for 2n maxima is performed on that response.
 For every occurence, the sourounding samples are set to zero to find individual spikes.
@@ -50,14 +50,14 @@ At first 10 executions of the test program are performed with a fixed delay.
 This time a pulsar wavelet as shown below is used to detect executions.
 As we do not need high resolution in time, the search is performed on the spectrogram.
 
-![alt tag](images/pulse.svg)
+<img class="imgCenter" src="images/pulse.svg">
 
 The pulse length can be estimated by the time between the challenge and response.
 The weavelet is repeated for each exectuion matching the known delay between the executions.
 This 'multi pulse wavelet' is then shifted over the spectrogram.
 The result of such a wavelet transform of the spectrogram is shown below.
 
-![alt tag](images/pulse-response.jpeg)
+<img class="imgCenter" src="images/pulse-response.jpeg">
 
 Some frequencies show high response, if the offset of the wavelet matches the offset in the captured signal.
 These frequencies with a high response can be used as a trigger signal.
@@ -69,7 +69,7 @@ As an upconverter was used, the frequency values have a constant offset of 125MH
 Interestingly there are also lots of side channel effects in the 30MHz-40MHz, twice as high as the CPU clock.
 The actual response also depends on the resonance frequency of the antenna.
 
-![alt tag](images/arduino-scan-hf.jpg)
+<img class="imgCenter" src="images/arduino-scan-hf.jpg">
 
 
 ## Static Alignment
@@ -79,7 +79,7 @@ The first trace is used as an reference and further traces are aligned using con
 It is important, that both traces are zero mean, otherwise, the result ist influenced too much by the number of samples.
 With low bandwith time series traces, this method works well without too much overhead.
 
-![alt tag](images/staticalignment-convolution.jpg)
+<img class="imgCenter" src="images/staticalignment-convolution.jpg">
 
 This image shows the convolution of two misaligned traces.
 The offset is clearly visible as the maximum response.

@@ -12,7 +12,7 @@ Most digital circuits are realized as CMOS gates with an positive and negative t
 For each gate output, either the PMOS or NMOS group of transistors is connecting the output of the gate to VCC or ground.
 A simulation of NOT gate is shown in the following picture.
 
-![alt tag](images/cmos-not.jpg)
+<img class="imgCenter" src="images/cmos-not.jpg">
 
 With a static view of such a gate, there should be no current flowing through the gate as either the CMOS or PMOS transistor is not conducting.
 Even though if a gate output changes its value and thereby its voltage, there are two effects, that causes a short current flow:
@@ -29,14 +29,14 @@ In this case an arduino will be used as a target, as they are easy reprogrammabl
 The CPU runs at a frequency of 16MHz.
 A small Loop antenna is used to pick up electrical emmanations caused by the device, that gets analyzed by an SDR.
 
-![alt tag](images/setup-arduino.jpg)
+<img class="imgCenter" src="images/setup-arduino.jpg">
 
 ## Pickups
 The most experiments are done with loop antennas or 'magnetic field probes'.
 Instead of buying professional ones, I build them my self using of the shelf coax cable.
 The construction is fairly simple: a small section of the shielding is removed at the middle of the cable and on one side the core is connected with the shielding.
 
-![alt tag](images/ant.jpg)
+<img class="imgCenter" src="images/ant.jpg">
 
 Depending on the number of turns and diameter of the antenna, the resonance frequency will change.
 A 3 turn antenna mostly works for frequencies lower than 10MHz, wheras a one turn loop antenna still works at 40MHz.
@@ -49,7 +49,7 @@ These are mostly caused by the CPU voltage regulation, that stabilizes the high 
 Low frequency signals are emmited that are changing with the powerconsumption of the CPU and thus different operations.
 The following image shows an example setup for side-channel analysis of a desktop PC:
 
-![alt tag](images/setup-pc.jpg)
+<img class="imgCenter" src="images/setup-pc.jpg">
 
 The desktop PC on the left is the Device Under Test (DUT) with a loop antenna on top, that gets 'attacked' by the laptop on the right
 In the middle a SDR receiver and an upconverter is located.
@@ -68,4 +68,4 @@ The program 'uhd_fft' or 'osmocom_fft' from the GNURadio toolchain can be used t
 As we can see, there are obvious differences in the spectrogram caused by the change of the CPU load.
 The same behaviour can also be observed on other devices, and is used to detect the execution of the test program.
 
-![alt tag](images/idle-busy.jpg)
+<img class="imgCenter" src="images/idle-busy.jpg">

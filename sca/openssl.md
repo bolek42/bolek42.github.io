@@ -7,7 +7,7 @@ Even though, the attack is very interesting from a technical point of view.
 A big (15cm diameter) 3 turn loop antenna was used to pick up the signal.
 The case was opened to good signal strength but even with a closed case, some of the signals still leak through the case.
 
-![alt tag](images/setup-pc.jpg)
+<img class="imgCenter" src="images/setup-pc.jpg">
 
 ## Geting a Signal
 First we have to check, if different operations are distinguishable from the signals.
@@ -26,21 +26,21 @@ Mutiple harmonics of the same signal are visible, which should all contain the s
 The multiplications are clearly distinguishable from the dummy operations, as the noise on the frequency axis increases for all carriers.
 This seems to be an example of frequency modulated side-channel leakage.
 
-![alt tag](images/dell-mul-raw.jpg)
+<img class="imgCenter" src="images/dell-mul-raw.jpg">
 
 One of the carrieres was filtered and frequency demodulated.
 The result is a very clean spectrogram (averaged over several traces) that contains only three frequencies.
 Note that the symmetry of the spectrogram is caused by the frequency demodulation what is a real signal.
 Again the Multiplications are clearly visible as a new carrier is appearing in the demodulated signal.
 
-![alt tag](images/dell-mul-4096-mean.jpg)
+<img class="imgCenter" src="images/dell-mul-4096-mean.jpg">
 
 The previous spectrogram was the result of multiplication with 4096 bit modul, the same experiment was repeated with 2048 bit one.
 As the numbers are "shorter", the total runtime of the multiplications also decreases.
 Interestingly, the carrier, that is caused by the multiplication routine has shift in frequency.
 It could be, that this carrier is caused by the repetition frequency of the multiplications.
 
-![alt tag](images/dell-mul-2048-mean.jpg)
+<img class="imgCenter" src="images/dell-mul-2048-mean.jpg">
 
 ## DPA BN_mod_mul
 
@@ -56,13 +56,13 @@ By performing the analysis for the OpenSSL multiplications, obvious differences 
 It seems, that the carrier that is caused by the multiplication has shifted in frequency.
 As the multiplication routine has similar known timing side channel, this is also an indication, that the carrier is caused by the repetition of the multiplication routine.
 
-![alt tag](images/dell-mul-dpa-unequal.jpg)
+<img class="imgCenter" src="images/dell-mul-dpa-unequal.jpg">
 
 To confirm, this is a actual sidechannel and not a measurement error, the same experiment is repeated with two numbers $ A , B < N $.
 No more differences can be observed in the spectrogram.
 By using this sidechannel, we can compare numbers with the modul.
 
-![alt tag](images/dell-mul-dpa-equal.jpg)
+<img class="imgCenter" src="images/dell-mul-dpa-equal.jpg">
 
 ## DPA BN_mod_exp
 
@@ -97,9 +97,9 @@ For a 2048 bit exponentiation, this means we have $2048/5 = 410$ iterations of t
 This is much fewer than the in the previous experiments, but with ca. 400 traces we can observer differences.
 But even though, it is enough to cause measurable sidechannel effects.
 
-![alt tag](images/dell-exp-unequal.jpg)
+<img class="imgCenter" src="images/dell-exp-unequal.jpg">
 
-![alt tag](images/dell-exp-equal.jpg)
+<img class="imgCenter" src="images/dell-exp-equal.jpg">
 
 ## RSA CRT
 In contrast to normal RSA encryption, which is simpy the computation of $m = c ^ d \mod N$ an optimization using the chineese remainder theorem is used, which is up to 4 times faster than the regular RSA computation.

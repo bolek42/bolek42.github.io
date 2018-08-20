@@ -150,7 +150,7 @@ A rough estimation is
 | 2        | ~50 bit                |
 | 3        | ~30 bit                |
 
-
+<!--
 # PoC
 The repository  [bolek42/iotaWayBack](https://github.com/bolek42/iotaWayBack.git) implements a basic PoC for the problems above.
 After using traverse.py to download the tangle parse_and_store.py can be used to export the transactions to a sqlite database.
@@ -177,3 +177,5 @@ Note that this implementation is single threaded and not tuned for performance.
 ```
 python sigforge.py address
 ```
+
+-->
