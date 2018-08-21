@@ -27,17 +27,29 @@ ga('send', 'pageview');
 .imgLeft {float: left; width: 30%;}
 .imgRight {float: right; width: 30%;}
 .imgCenter {width: 100%;}
+.header {background-color:#666666;width:100%;position:relative;z-index:1000;position:fixed;height:70px}
+.sidebar {margin-top:70px;width:15%;}
+.content {padding-top:70px}
 </style>
 
 
 <body>
-  <center><h2>A Small Collection of Random Projects</h2></center><hr>
-  <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:15%">
+  <div class="header"><center><h2><font color="#eeeeee">A Small Collection of Random Projects</font></h2></center></div>
+  <div class="w3-sidebar w3-light-grey w3-bar-block sidebar">
     <div onmouseover="accordionToggle('side-sec')" onmouseout="accordionPermanent()">
       <button class="w3-button w3-block w3-left-align"  onclick="accordionTogglePermanent('side-sec')"> Security <i class="fa fa-caret-right accordion-arrow"></i> </button>
       <div id="side-sec" class="w3-hide w3-white w3-card accordion">
         <a href="/sec/fuzz.html" class="w3-bar-item w3-button">Fuzzing</a>
         <a href="/sec/iota.html" class="w3-bar-item w3-button">IOTA Multisignature Problem</a>
+      </div>
+    </div>
+
+    <div onmouseover="accordionToggle('side-ctf')" onmouseout="accordionPermanent()">
+      <button class="w3-button w3-block w3-left-align"  onclick="accordionTogglePermanent('side-ctf')"> CTF Solves <i class="fa fa-caret-right accordion-arrow"></i> </button>
+      <div id="side-ctf" class="w3-hide w3-white w3-card accordion">
+        <a href="ctf/2017-GoogleCTF/inst_prof/" class="w3-bar-item w3-button">2017-GoogleCTF/inst_prof</a>
+        <a href="ctf/2017-PlaidCTF/terebeep/" class="w3-bar-item w3-button">2017-PlaidCTF/terebeep</a>
+        <a href="ctf/2018-AsisCTF/myblog/" class="w3-bar-item w3-button">2018-AsisCTF/myblog/</a>
       </div>
     </div>
 
@@ -70,7 +82,7 @@ ga('send', 'pageview');
 
   </div>
 
-  <div style="margin-left:25%" class="container content">
+  <div class="container content">
     {{ content }}
   </div>
 
@@ -78,9 +90,19 @@ ga('send', 'pageview');
     function accordionToggle(id, allowPermanent=false) {
       if (!allowPermanent && accordionGetPermanent().indexOf(id) != -1) return;
 
-      var x = document.getElementById(id);
-      if (x.className.indexOf("w3-show") == -1) x.className += " w3-show";
-      else x.className = x.className.replace(" w3-show", "");
+      var element = document.getElementById(id);
+
+      var arrow = element.parentElement.getElementsByClassName("accordion-arrow")[0];
+      arrow.className = arrow.className.replace(" fa-caret-right", "");
+      arrow.className = arrow.className.replace(" fa-caret-down", "");
+
+      if (element.className.indexOf("w3-show") == -1) {
+        element.className += " w3-show";
+        arrow.className += " fa-caret-down";
+      } else{ 
+        element.className = element.className.replace(" w3-show", "");
+        arrow.className += " fa-caret-right";
+      }
     }
 
     function accordionGetPermanent() {
@@ -98,10 +120,16 @@ ga('send', 'pageview');
 
       window.location.href = url[0] + "#" + elements.join(",");
       accordionPermanent();
+    }
+
+    function accordionUpdateLinks() {
+      var url = window.location.href.split("#")
+      var elements = (url.length > 1) ? url[1].split(",") : [];
 
       var links = document.getElementsByTagName("a");
       for (i=0; i<links.length; i++) 
         links[i].href = links[i].href.split("#")[0] + "#" + elements.join(",");
+
     }
 
     function accordionPermanent() {
@@ -112,7 +140,6 @@ ga('send', 'pageview');
         arrow.className = arrow.className.replace(" fa-caret-right", "");
         arrow.className = arrow.className.replace(" fa-caret-down", "");
 
-
         if (accordionGetPermanent().indexOf(elements[i].id) != -1) {
           elements[i].className += " w3-show";
           arrow.className += " fa-caret-down";
@@ -122,9 +149,19 @@ ga('send', 'pageview');
             elements[i].className = elements[i].className.replace(" w3-show", "");
         }
       }
+      accordionUpdateLinks();
+
     }
     accordionPermanent();
 
+    //fix images without class name
+    var images = document.getElementsByTagName("img");
+    for (var i=0; i < images.length; i++)
+      if (images[i].className == "")
+        images[i].className = "imgCenter";
+
+
+    //make images as link
     function makelink(classname) {
       var elements = document.getElementsByClassName(classname)
       for (var i=0; i<elements.length;i++) {
@@ -138,6 +175,8 @@ ga('send', 'pageview');
     makelink("imgLeft");
     makelink("imgRight");
     makelink("imgCenter");
+
+
   </script>
 
 </body>
