@@ -36,48 +36,38 @@ ga('send', 'pageview');
 <body>
   <div class="header"><center><h2><font color="#eeeeee">A Small Collection of Random Projects</font></h2></center></div>
   <div class="w3-sidebar w3-light-grey w3-bar-block sidebar">
-    <div onmouseover="accordionToggle('side-sec')" onmouseout="accordionPermanent()">
-      <button class="w3-button w3-block w3-left-align"  onclick="accordionTogglePermanent('side-sec')"> Security <i class="fa fa-caret-right accordion-arrow"></i> </button>
-      <div id="side-sec" class="w3-hide w3-white w3-card accordion">
-        <a href="/sec/fuzz.html" class="w3-bar-item w3-button">Fuzzing</a>
-        <a href="/sec/iota.html" class="w3-bar-item w3-button">IOTA Multisignature Problem</a>
-      </div>
+    <button class="w3-button w3-block w3-left-align"  onclick="accordionToggle('side-sec')"> Security <i class="fa fa-caret-right accordion-arrow"></i> </button>
+    <div id="side-sec" class="w3-hide w3-white w3-card accordion">
+      <a href="/sec/fuzz.html" class="w3-bar-item w3-button">Fuzzing</a>
+      <a href="/sec/iota.html" class="w3-bar-item w3-button">IOTA Multisignature Problem</a>
     </div>
 
-    <div onmouseover="accordionToggle('side-ctf')" onmouseout="accordionPermanent()">
-      <button class="w3-button w3-block w3-left-align"  onclick="accordionTogglePermanent('side-ctf')"> CTF Solves <i class="fa fa-caret-right accordion-arrow"></i> </button>
-      <div id="side-ctf" class="w3-hide w3-white w3-card accordion">
-        <a href="ctf/2017-GoogleCTF/inst_prof/" class="w3-bar-item w3-button">2017-GoogleCTF/inst_prof</a>
-        <a href="ctf/2017-PlaidCTF/terebeep/" class="w3-bar-item w3-button">2017-PlaidCTF/terebeep</a>
-        <a href="ctf/2018-AsisCTF/myblog/" class="w3-bar-item w3-button">2018-AsisCTF/myblog/</a>
-      </div>
+    <button class="w3-button w3-block w3-left-align"  onclick="accordionToggle('side-ctf')"> CTF Solves <i class="fa fa-caret-right accordion-arrow"></i> </button>
+    <div id="side-ctf" class="w3-hide w3-white w3-card accordion">
+      <a href="/ctf/2017-GoogleCTF/inst_prof/" class="w3-bar-item w3-button">2017-GoogleCTF/inst_prof</a>
+      <a href="/ctf/2017-PlaidCTF/terebeep/" class="w3-bar-item w3-button">2017-PlaidCTF/terebeep</a>
+      <a href="/ctf/2018-AsisCTF/myblog/" class="w3-bar-item w3-button">2018-AsisCTF/myblog/</a>
     </div>
 
-    <div onmouseover="accordionToggle('side-sca')" onmouseout="accordionPermanent()">
-      <button class="w3-button w3-block w3-left-align" onclick="accordionTogglePermanent('side-sca')"> Side-Channel Attacks & SDR <i class="fa fa-caret-right accordion-arrow"></i> </button>
-      <div id="side-sca" class="w3-hide w3-white w3-card accordion">
-        <a href="/sca/introduction.html" class="w3-bar-item w3-button">Introduction</a>
-        <a href="/sca/capture.html" class="w3-bar-item w3-button">Capture</a>
-        <a href="/sca/openssl.html" class="w3-bar-item w3-button">OpenSSL</a>
-        <a href="/sca/arduino.html" class="w3-bar-item w3-button">Arduino</a>
-      </div>
+    <button class="w3-button w3-block w3-left-align" onclick="accordionToggle('side-sca')"> Side-Channel Attacks & SDR <i class="fa fa-caret-right accordion-arrow"></i> </button>
+    <div id="side-sca" class="w3-hide w3-white w3-card accordion">
+      <a href="/sca/introduction.html" class="w3-bar-item w3-button">Introduction</a>
+      <a href="/sca/capture.html" class="w3-bar-item w3-button">Capture</a>
+      <a href="/sca/openssl.html" class="w3-bar-item w3-button">OpenSSL</a>
+      <a href="/sca/arduino.html" class="w3-bar-item w3-button">Arduino</a>
     </div>
 
-    <div onmouseover="accordionToggle('side-phy')" onmouseout="accordionPermanent()">
-      <button class="w3-button w3-block w3-left-align"  onclick="accordionTogglePermanent('side-phy')"> Physics <i class="fa fa-caret-right accordion-arrow"></i> </button>
-      <div id="side-phy" class="w3-hide w3-white w3-card accordion">
-        <a href="/phy/hv.html" class="w3-bar-item w3-button">High Voltage</a>
-        <a href="/phy/vac.html" class="w3-bar-item w3-button">High Vacuum</a>
-        <a href="/phy/xray.html" class="w3-bar-item w3-button">Xrays</a>
-        <a href="/phy/ion.html" class="w3-bar-item w3-button">Iongun</a>
-      </div>
+    <button class="w3-button w3-block w3-left-align"  onclick="accordionToggle('side-phy')"> Physics <i class="fa fa-caret-right accordion-arrow"></i> </button>
+    <div id="side-phy" class="w3-hide w3-white w3-card accordion">
+      <a href="/phy/hv.html" class="w3-bar-item w3-button">High Voltage</a>
+      <a href="/phy/vac.html" class="w3-bar-item w3-button">High Vacuum</a>
+      <a href="/phy/xray.html" class="w3-bar-item w3-button">Xrays</a>
+      <a href="/phy/ion.html" class="w3-bar-item w3-button">Iongun</a>
     </div>
 
-    <div onmouseover="accordionToggle('side-misc')" onmouseout="accordionPermanent()">
-      <button class="w3-button w3-block w3-left-align" onclick="accordionTogglePermanent('side-misc')"> Misc <i class="fa fa-caret-right accordion-arrow"> </i></button>
-      <div id="side-misc" class="w3-hide w3-white w3-card accordion">
-        <a href="/numb/mandelbrot.html" class="w3-bar-item w3-button">4D Mandelbrot</a>
-      </div>
+    <button class="w3-button w3-block w3-left-align" onclick="accordionToggle('side-misc')"> Misc <i class="fa fa-caret-right accordion-arrow"> </i></button>
+    <div id="side-misc" class="w3-hide w3-white w3-card accordion">
+      <a href="/numb/mandelbrot.html" class="w3-bar-item w3-button">4D Mandelbrot</a>
     </div>
 
   </div>
@@ -87,31 +77,13 @@ ga('send', 'pageview');
   </div>
 
   <script>
-    function accordionToggle(id, allowPermanent=false) {
-      if (!allowPermanent && accordionGetPermanent().indexOf(id) != -1) return;
-
-      var element = document.getElementById(id);
-
-      var arrow = element.parentElement.getElementsByClassName("accordion-arrow")[0];
-      arrow.className = arrow.className.replace(" fa-caret-right", "");
-      arrow.className = arrow.className.replace(" fa-caret-down", "");
-
-      if (element.className.indexOf("w3-show") == -1) {
-        element.className += " w3-show";
-        arrow.className += " fa-caret-down";
-      } else{ 
-        element.className = element.className.replace(" w3-show", "");
-        arrow.className += " fa-caret-right";
-      }
-    }
-
-    function accordionGetPermanent() {
+    function accordionGet() {
       var url = window.location.href.split("#")
       if (url.length > 1) return url[1].split(",");
       return [];
     }
 
-    function accordionTogglePermanent(id) {
+    function accordionToggle(id) {
       var url = window.location.href.split("#")
       var elements = (url.length > 1) ? url[1].split(",") : [];
       elements = elements.filter(function (x) {return x != ""})
@@ -119,7 +91,7 @@ ga('send', 'pageview');
       else elements = elements.filter(function (x) {return x != id})
 
       window.location.href = url[0] + "#" + elements.join(",");
-      accordionPermanent();
+      accordion();
     }
 
     function accordionUpdateLinks() {
@@ -132,7 +104,7 @@ ga('send', 'pageview');
 
     }
 
-    function accordionPermanent() {
+    function accordion() {
       var elements = document.getElementsByClassName("accordion");
 
       for (var i=0; i < elements.length; i++) {
@@ -140,19 +112,17 @@ ga('send', 'pageview');
         arrow.className = arrow.className.replace(" fa-caret-right", "");
         arrow.className = arrow.className.replace(" fa-caret-down", "");
 
-        if (accordionGetPermanent().indexOf(elements[i].id) != -1) {
+        if (accordionGet().indexOf(elements[i].id) != -1) {
           elements[i].className += " w3-show";
           arrow.className += " fa-caret-down";
         } else {
           arrow.className += " fa-caret-right";
-          while ( elements[i].className.indexOf(" w3-show") != -1)
-            elements[i].className = elements[i].className.replace(" w3-show", "");
+          elements[i].className = elements[i].className.replace(" w3-show", "");
         }
       }
       accordionUpdateLinks();
-
     }
-    accordionPermanent();
+    accordion();
 
     //fix images without class name
     var images = document.getElementsByTagName("img");
