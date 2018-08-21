@@ -117,7 +117,8 @@ ga('send', 'pageview');
           arrow.className += " fa-caret-down";
         } else {
           arrow.className += " fa-caret-right";
-          elements[i].className = elements[i].className.replace(" w3-show", "");
+          while ( elements[i].className.indexOf(" w3-show") != -1)
+            elements[i].className = elements[i].className.replace(" w3-show", "");
         }
       }
       accordionUpdateLinks();
