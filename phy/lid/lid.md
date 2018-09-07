@@ -1,12 +1,12 @@
 # Why Fusion must be Hot
 
-In fusion bombs, a mixture of Lithium and Deuterium e.g. Lithiumdeuterid $LiD$ was used to perform nuclear fusion with an (obviously) positive power factor.
-Lithiumdeuterid is a stable salt, so why cant we use it in a molten salt reactor to gain energy?
+In fusion bombs, a mixture of Lithium and Deuterium, e.g. Lithium deuteride $LiD$, was used to perform nuclear fusion with an (obviously) positive power factor.
+Lithium deuteride is a stable salt, so why can't we use it in a molten salt reactor to gain energy?
 
 The most common fusion reactions involve Deuterium and Tritium.
-Tritium is a highly radioactive isotope, that does not occure naturaly.
-But it is also possible perform a fusion reaction using Deuterium, an element that occures naturally in large quantities.
-So lets take a bunch of $LiD$ and hit it with Deuterium with a couple of $keV$ and see whats happens.
+Tritium is a highly radioactive isotope, that does not occurs naturally.
+But it is also possible to perform a fusion reaction using Deuterium, an element that occurs naturally in large quantities.
+So let's take a bunch of $LiD$ and hit it with Deuterium at a couple of $keV$ and see what happens.
 The first obvious reaction would be:
 
 <table><tr><td>
@@ -16,8 +16,7 @@ The first obvious reaction would be:
     <img class="imgCenter" src="images/DD_n.png">
 </td></tr></table>
 
-In theory the Deuterium could undergo an endothermic reaction with Lithium, but as the required energies of $~600keV$ are too high, this reaction can be ignored at the moment.
-
+In theory, the Deuterium could undergo an endothermic reaction with Lithium, but as the required energies of $~600keV$ are too high, this reaction can be ignored at the moment.
 <table><tr><td>
     $$ Li^7 + D \rightarrow Li^8 + p - 0.19 MeV $$
 </td><td width="30%">
@@ -42,7 +41,7 @@ This reaction even has a 10 times higher cross section than the $D+D$ reaction.
 Both, the $D+D$ and the $D+T$ reactions generate fast neutrons.
 These neutrons can be used to breed more Tritium using Lithium.
 Even though this reaction is endothermic, the neutrons are fast enough to trigger this reaction.
-Also a new neutron is generated so one $14MeV$ neutron could generate a couple of Tritium atoms.
+Also, a new neutron is generated so one $14MeV$ neutron could generate a couple of Tritium atoms.
 These particles have a lower energy but certainly more than $100 keV$, the maximum cross section for the $D+T$ reaction.
 
 <table><tr><td>
@@ -51,13 +50,13 @@ These particles have a lower energy but certainly more than $100 keV$, the maxim
     <img class="imgCenter" src="images/Li7n_t.png">
 </td></tr></table>
 
-At this point, $LiD$ could reach critality.
-In theory there can be a self replicating chain reaction.
+At this point, $LiD$ could reach criticality.
+In theory, there can be a self-replicating chain reaction.
 
 # Further Reactions
 
-In addition there are a couple of possible side reactions.
-The protons can also react with the the Lithium and generate even more neutrons.
+In addition, there are a couple of possible side reactions.
+The protons can also react with the Lithium and generate even more neutrons.
 Even though, they will be most likely too slow to breed new tritium as both reactions would require $4.38 MeV$.
 <table><tr><td>
     $$ Li^7 + p \rightarrow Be^7 + n - 1.64 MeV $$
@@ -67,7 +66,7 @@ Even though, they will be most likely too slow to breed new tritium as both reac
 [//]: # Energy gain
 [//]: # $$ 7.0160034366 + 1.00782503214 - 7.016928717 - 1.00866491588 = -0.0017651641400002749 = -1.644239973822075 MeV $$
 
-Even though with a slightly lower propability, we could end up with two alpha particles.
+Even though with a slightly lower probability, we could end up with two alpha particles.
 As those are quite stable, this reaction releases a huge amount of energy.
 
 <table><tr><td>
@@ -79,7 +78,7 @@ As those are quite stable, this reaction releases a huge amount of energy.
 [//]: # Energy gain
 [//]: # $$ 7.0160034366 + 1.00782503214 - 4.00260325413 - 4.00260325413 = 0.01862196047999909 = 17.3462462318913 MeV $$
 
-Each alpha particle estimated energy of $8.67 MeV$ each, so they could undergo another endothermic reaction that produces neutrons.
+Each alpha particle has a estimated energy of $8.67 MeV$ each, so they could undergo another endothermic reaction that produces neutrons.
 The generated neutrons could in theory breed new Tritium, what would require only $5.53 MeV$.
 
 <table><tr><td>
@@ -94,28 +93,28 @@ The generated neutrons could in theory breed new Tritium, what would require onl
 
 # The Problem
 
-Even though, the reactions above are overall exothermic and could reach critality, there is one big problem: Electrons.
+Even though the reactions above are overall exothermic and could reach criticality, there is one big problem: Electrons.
 As the charged particles pass an atom, they pull electrons out of the shells, what requires energy.
 This process is called inelastic scattering and the energy loss can be approximated using the Bethe formula.
-This chart shows the energy loss for an proton hitting an aluminium target.
+This chart shows the energy loss for a proton hitting an aluminum target.
 The actual value is dependent on the target material and the incident particle but it gives an overview of the order of magnitude.
 <img class="imgRight" src="images/1024px-StoppingHinAlBethe.png">
 [//]: #https://de.wikipedia.org/wiki/Bethe-Formel
 
-Lets have a close look at the Tritium generated by the $D+D$ reaction.
-It has an energy of approx $1MeV$ and according the chart we can estimate an energyloss of $80MeV/mm$
+Let's have a close look at the Tritium generated by the $D+D$ reaction.
+It has an energy of approx $1MeV$ and according to the chart we can estimate an energy loss of $80MeV/mm$
 So the particle would be stopped after $1/80 mm = 12.5 \mu m$
 
 How likely is a reaction of this particle?
-The cross sections are given in barn what is actually an area of $1barn = 10^{-24}cm^2$.
-The underlying model is quite simple: Each particle gets a target according to the cross section and if it is hit by the particle, the reaction is triggered, otherwise not.
-The reaction propability for a short distance $z$ can be estimated as:
+The cross-sections are given in barn what is actually an area of $1barn = 10^{-24}cm^2$.
+The underlying model is quite simple: Each particle gets a target according to the cross-section and if it is hit by the particle, the reaction is triggered, otherwise not.
+The reaction probability for a short distance $z$ can be estimated as:
 
 $$ P(z) = z \cdot \sigma \cdot density $$
 
-Lithiumdeuteride is comparable to Lithiumhydride and has a molar density of $ 0.78 g \cdot cm^{-3} / 7.95 g \cdot mol^{-1} = 0.098 mol \cdot cm^{-3}$
+Lithium deuteride is comparable to Lithium hydride and has a molar density of $ 0.78 g \cdot cm^{-3} / 7.95 g \cdot mol^{-1} = 0.098 mol \cdot cm^{-3}$
 Lets assume the maximal cross section for the $D+T$ reaction of $5 barn$
-We would expect a reaction propability of:
+We would expect a reaction probability of:
 
 [//]: # 100keV particle
 [//]: # and is approximately $100MeV/mm$ so an incomming $100keV$ particle would be stopped after approx. $1\mu m$.
@@ -123,12 +122,12 @@ We would expect a reaction propability of:
 
 $$ P(12.5\mu m) = 0.00125 cm \cdot 5 \cdot 10^{-24} cm^2 \cdot 6.02 \cdot 10^{23} * 0.098 \frac{1}{cm^3} = 0.000368725$$
 
-At his point the whole thing bekomes a joke... Even with the utopic cross section estimation, only 0.03% of the generated tritium atoms would undergo a fusion reaction.
-This problem could be overvome by stripping all electrons beforehand, namley converting some reactants to plasma.
+At his point the whole thing becomes a joke... Even with the utopic cross-section estimation, only 0.03% of the generated tritium atoms would undergo a fusion reaction.
+This problem could be overvome by stripping all electrons beforehand, namely converting some reactants to plasma.
 So the particles have to have more energy than the bounding energy of the electrons.
-This energy is in the order of $54eV$ for the inner most $K$ shell of Lithium.
-That seems negligible in comparsion to the $MeV$ of the other particles but equals a temperature of roughly 594,000 Kelvin.
-Thats the reason fusion mus be hot.
+This energy is in the order of $54eV$ for the innermost $K$ shell of Lithium.
+That seems negligible in comparison to the $MeV$ of the other particles but equals a temperature of roughly 594,000 Kelvin.
+Thati's the reason fusion must be hot.
 
 [//]: # [ASTAR](https://physics.nist.gov/PhysRefData/Star/Text/ASTAR.html) to compute the stopping force.
 
