@@ -1,3 +1,7 @@
+---
+title: "4D Mandelbrot"
+description: "A 4D mandelbrot implementation using arbitrary start values"
+---
 
 # The Normal Mandelbrot
 The Mandeblort figure ist computed by the following series, wheres the real part of c is the x and the imaginary part the y axis of the plot.

@@ -1,3 +1,8 @@
+---
+title: "Capturing Sidechannel Traces using SDR"
+description: "Using an SDR to capture electromagnetic emanation sidechannel traces"
+---
+
 ## Abstract
 
 A SDR digitizes a small part of the RF spectrum and sends the data as a stream of complex samples to the computer.

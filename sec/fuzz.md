@@ -1,3 +1,8 @@
+---
+title: "Coverage Guided Fuzzing"
+description: "A coverage guided fuzzer"
+---
+
 # Intro (In Dev)
 There are tons of fuzzers out there and also very good ones such as AFL, so why did I write my own one?
 First of all, I learned a lot while doing so and second if everyone uses the same fuzzer, everyone will find the same bugs.

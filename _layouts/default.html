@@ -24,52 +24,80 @@ ga('send', 'pageview');
 
 
 <style>
+a {color: green;text-decoration: underline;}
 .imgLeft {float: left; width: 30%;}
 .imgRight {float: right; width: 30%;}
 .imgCenter {width: 100%;}
 .header {background-color:#666666;width:100%;position:relative;z-index:1000;position:fixed;height:70px}
 .sidebar {margin-top:70px;width:15%;}
 .content {padding-top:70px}
+
+.collapsible {
+    background-color: #777;
+    color: white;
+    border: none;
+}
+
+.collapsibleContent {
+    display: none;
+    overflow: hidden;
+}
 </style>
 
 
 <body>
   <div class="header"><center><h2><font color="#eeeeee">A Small Collection of Random Projects</font></h2></center></div>
   <div class="w3-sidebar w3-light-grey w3-bar-block sidebar">
-    <button class="w3-button w3-block w3-left-align"  onclick="accordionToggle('side-sec')"> Security <i class="fa fa-caret-right accordion-arrow"></i> </button>
-    <div id="side-sec" class="w3-hide w3-white w3-card accordion">
-      <a href="/sec/fuzz.html" class="w3-bar-item w3-button">Fuzzing</a>
-      <a href="/sec/iota.html" class="w3-bar-item w3-button">IOTA Multisignature Problem</a>
+    <div>
+      <button class="w3-button w3-block w3-left-align"  onclick="accordionToggle('side-sec')"> Security <i class="fa fa-caret-right accordion-arrow"></i> </button>
+      <div id="side-sec" class="w3-hide w3-white w3-card accordion">
+        <a href="/sec/fuzz.html" class="w3-bar-item w3-button">Fuzzing</a>
+        <a href="/sec/iota.html" class="w3-bar-item w3-button">IOTA Multisignature Problem</a>
+      </div>
     </div>
 
-    <button class="w3-button w3-block w3-left-align"  onclick="accordionToggle('side-ctf')"> CTF Solves <i class="fa fa-caret-right accordion-arrow"></i> </button>
-    <div id="side-ctf" class="w3-hide w3-white w3-card accordion">
-      <a href="/ctf/2017-GoogleCTF/inst_prof/" class="w3-bar-item w3-button">2017-GoogleCTF/inst_prof</a>
-      <a href="/ctf/2017-PlaidCTF/terebeep/" class="w3-bar-item w3-button">2017-PlaidCTF/terebeep</a>
-      <a href="/ctf/2018-AsisCTF/myblog/" class="w3-bar-item w3-button">2018-AsisCTF/myblog/</a>
+    <div>
+      <button class="w3-button w3-block w3-left-align"  onclick="accordionToggle('side-ctf')"> CTF Writeups <i class="fa fa-caret-right accordion-arrow"></i> </button>
+      <div id="side-ctf" class="w3-hide w3-white w3-card accordion">
+        <a href="/ctf/2017-GoogleCTF/inst_prof/" class="w3-bar-item w3-button">2017-GoogleCTF/inst_prof - Pwn</a>
+        <a href="/ctf/2017-PlaidCTF/terebeep/" class="w3-bar-item w3-button">2017-PlaidCTF/terebeep - Misc</a>
+        <a href="/ctf/2018-AsisCTF/myblog/" class="w3-bar-item w3-button">2018-AsisCTF/myblog - Pwn</a>
+      </div>
     </div>
 
-    <button class="w3-button w3-block w3-left-align" onclick="accordionToggle('side-sca')"> Side-Channel Attacks & SDR <i class="fa fa-caret-right accordion-arrow"></i> </button>
-    <div id="side-sca" class="w3-hide w3-white w3-card accordion">
-      <a href="/sca/introduction.html" class="w3-bar-item w3-button">Introduction</a>
-      <a href="/sca/capture.html" class="w3-bar-item w3-button">Capture</a>
-      <a href="/sca/openssl.html" class="w3-bar-item w3-button">OpenSSL</a>
-      <a href="/sca/arduino.html" class="w3-bar-item w3-button">Arduino</a>
+    <div>
+      <button class="w3-button w3-block w3-left-align"  onclick="accordionToggle('side-chals')"> CTF Challenges <i class="fa fa-caret-right accordion-arrow"></i> </button>
+      <div id="side-chals" class="w3-hide w3-white w3-card accordion">
+        <a href="/chals/MRMCD-2018/Covfefe/README.html" class="w3-bar-item w3-button">MRMCD-2018/Covfefe - Web</a>
+      </div>
     </div>
 
-    <button class="w3-button w3-block w3-left-align"  onclick="accordionToggle('side-phy')"> Physics <i class="fa fa-caret-right accordion-arrow"></i> </button>
-    <div id="side-phy" class="w3-hide w3-white w3-card accordion">
-      <a href="/phy/hv.html" class="w3-bar-item w3-button">High Voltage</a>
-      <a href="/phy/vac.html" class="w3-bar-item w3-button">High Vacuum</a>
-      <a href="/phy/xray.html" class="w3-bar-item w3-button">Xrays</a>
-      <a href="/phy/ion.html" class="w3-bar-item w3-button">Iongun</a>
+
+    <div>
+      <button class="w3-button w3-block w3-left-align" onclick="accordionToggle('side-sca')"> Side-Channel Attacks & SDR <i class="fa fa-caret-right accordion-arrow"></i> </button>
+      <div id="side-sca" class="w3-hide w3-white w3-card accordion">
+        <a href="/sca/introduction.html" class="w3-bar-item w3-button">Introduction</a>
+        <a href="/sca/capture.html" class="w3-bar-item w3-button">Capture</a>
+        <a href="/sca/openssl.html" class="w3-bar-item w3-button">OpenSSL</a>
+        <a href="/sca/arduino.html" class="w3-bar-item w3-button">Arduino</a>
+      </div>
     </div>
 
-    <button class="w3-button w3-block w3-left-align" onclick="accordionToggle('side-misc')"> Misc <i class="fa fa-caret-right accordion-arrow"> </i></button>
-    <div id="side-misc" class="w3-hide w3-white w3-card accordion">
-      <a href="/numb/mandelbrot.html" class="w3-bar-item w3-button">4D Mandelbrot</a>
+    <div>
+      <button class="w3-button w3-block w3-left-align"  onclick="accordionToggle('side-phy')"> Physics <i class="fa fa-caret-right accordion-arrow"></i> </button>
+      <div id="side-phy" class="w3-hide w3-white w3-card accordion">
+        <a href="/phy/hv.html" class="w3-bar-item w3-button">High Voltage</a>
+        <a href="/phy/vac.html" class="w3-bar-item w3-button">High Vacuum</a>
+        <a href="/phy/ion.html" class="w3-bar-item w3-button">Iongun</a>
+      </div>
     </div>
 
+    <div>
+      <button class="w3-button w3-block w3-left-align" onclick="accordionToggle('side-misc')"> Misc <i class="fa fa-caret-right accordion-arrow"> </i></button>
+      <div id="side-misc" class="w3-hide w3-white w3-card accordion">
+        <a href="/misc/mandelbrot.html" class="w3-bar-item w3-button">4D Mandelbrot</a>
+      </div>
+    </div>
   </div>
 
   <div class="container content">
@@ -147,7 +175,20 @@ ga('send', 'pageview');
     makelink("imgRight");
     makelink("imgCenter");
 
-
+    //collapsible
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        var content = this;
+        while ((' '+content.className+' ').indexOf(' collapsibleContent ') == -1) {
+          if (content.nextElementSibling == null) content = content.parentElement;
+          else content = content.nextElementSibling;
+        }
+        if (content.style.display === "block") content.style.display = "none";
+        else content.style.display = "block";
+      });
+    }
   </script>
 
 </body>

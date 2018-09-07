@@ -1,7 +1,9 @@
 # Terebeep
 
 ### Short Description
-High resolution SSTV
+In this challenge only [this wav file](terebeep.wav) was given without any further information.
+In the end it was a SSTV (Slow Scan TeleVision) transmission, what can be used to transmit images in an analogue way.
+Even though, they used a higher bandwidth as usual, so a manual demodulation has to be performed.
 
 ### Setp 1: Demodulation
 After listening to the wav file, we viewed the spectrogram of the signal in Inspectrum.

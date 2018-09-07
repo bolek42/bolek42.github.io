@@ -1,0 +1,13 @@
+[Unit]
+Description=CTF Service covfefe
+Requires=docker.service
+After=docker.service
+
+[Service]
+ExecStartPre=-/usr/bin/docker kill covfefe  
+ExecStartPre=-/usr/bin/docker rm covfefe    
+ExecStart=/usr/bin/docker run  --name covfefe -p 8889:8889 covfefe
+ExecStop=/usr/bin/docker kill covfefe
+
+[Install]
+WantedBy=multi-user.target

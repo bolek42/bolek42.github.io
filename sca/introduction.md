@@ -1,3 +1,8 @@
+---
+title: "Introduction to Electromagnetic Emanation Attacks using SDRs"
+description: "Introduction to Electromagnetic Emanation Attacks using SDRs"
+---
+
 ## Electrical Emmanation Attacks
 
 All electronic devices create some sort of electrical emmanations, that are caused by voltage and current fluctuations.

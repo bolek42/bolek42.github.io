@@ -1,3 +1,9 @@
+---
+title: "Sidechannel attacks using an SDR"
+description: "Sidechannel attacks using an SDR"
+---
+
+
 ## SDR as a Side-Channel Attack Platform
 
 Here you can find a more detailed description of the [rsa-sdr](https://github.com/bolek42/rsa-sdr) project.

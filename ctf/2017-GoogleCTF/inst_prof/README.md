@@ -144,5 +144,6 @@ CTF{0v3r_4ND_0v3r_4ND_0v3r_4ND_0v3r}
 ```
 
 # Files
+- [Binary](inst_prof)
 - [Patched binary](patched_inst_prof)
 - [Exploit](exploit.py)

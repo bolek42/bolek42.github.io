@@ -1,3 +1,9 @@
+---
+title: "CPA Attack against DES using SDR"
+description: "A Correlation Power analysis on an Arduino using electromagnetic emanation against DES"
+---
+
+
 ## Leakage
 Also embedded devices are vulnerable to EM attacks.
 A small loop antenna can be used to pick up such signals.

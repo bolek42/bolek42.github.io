@@ -1,3 +1,8 @@
+---
+title: "Electromagnetic Emanation Attacks against OpenSSL"
+description: "Electromagnetic Emanation Attacks against OpenSSL"
+---
+
 ## Abstract
 OpenSSL implements arithmetic primitives such as multiplication and exponentiation in the 'Big Number Library'.
 These primitives often shows side channel effects, that can be measured using a software defined radio.
