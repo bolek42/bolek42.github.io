@@ -23,7 +23,7 @@ First of all, I learned a lot while doing so and second if everyone uses the sam
 [1017](https://bugzilla.libav.org/show_bug.cgi?id=1017)
 [1018](https://bugzilla.libav.org/show_bug.cgi?id=1018)
 
-In fact, the bug [952](https://bugzilla.libav.org/show_bug.cgi?id=952) (uninitialized pointer) also triggered in ffmpeg.
+In fact, the bug [952](https://bugzilla.libav.org/show_bug.cgi?id=952) (uninitialized pointer) also triggered in FFmpeg.
 Sadly I did not check it against any browser, so I noticed later that Chromium was also affected.
 One bug hits three projects so I decided to request a CVE and here it is: CVE-2017-1000460
 
@@ -32,7 +32,7 @@ One bug hits three projects so I decided to request a CVE and here it is: CVE-20
 By just mutating the file blindly, without any feedback, is called 'dumb fuzzing'.
 It is fairly easy to implement but is also limited in the results.
 For open source software, it is often possible to get some sort of feedback or metric if a mutation makes 'sense' to the application.
-One approach is to use codecoverage.
+One approach is to use code coverage.
 A large bitmap is generated, whereas each bit is associated with one basic block in the code.
 If the basic block is hit, the corresponding bit is set to 1 and 0 otherwise.
 Such a bitmap can greatly improve the performance of a fuzzer (e.g. AFL uses the same approach).
@@ -44,7 +44,7 @@ export ASAN_OPTIONS="coverage=1:coverage_bitset=1"
 ```
 
 If the ASAN_OPTIONS environment variable is set correctly, a $binary.$pid.bitset-sancov is created containing the coverage bitmap as a long string with ASCII '0' and '1'.
-For programs such as avconv, which is a 45MB binary, these bitmaps can get very large like 450.000 entries.
+For programs such as ```avconv```, which is a 45MB binary, these bitmaps can get very large like 450.000 entries.
 For easy processing, this bitmap is parsed as an integer that also allows further processing.
 Let t be a bitmap of a specific testcase and c the total coverage:
 
@@ -58,7 +58,7 @@ A detailed error message is printed to stderr, that can be parsed, by the callin
 The best way to detect a new crash is to use the rip of the crash, but this will interfere with ASLR.
 Therefore it is required to disable ASLR on the fuzzing machine, so a dedicated fuzzing machine is required.
 
-Compiling programs with clang, code coverage and asan is sometimes a struggle.
+Compiling programs with clang, code coverage, and asan is sometimes a struggle.
 For a lot of programs or libraries, it is sufficient to set the following environment variables:
 
 ```
@@ -72,7 +72,7 @@ export LDFLAGS=-Wc -fsanitize=address -fsanitize-coverage=edge
 The basic concept of coverage guided fuzzing is based on a genetic algorithm to increase code coverage.
 We start with a single seed file in the population and the total coverage of the population is hold as a global state.
 A random element from the population is picked, mutated and the coverage is measured.
-If a mutation hits a new basic block, the testcase is added to the population and the total coverage is increased.
+If a mutation hits a new basic block, the test case is added to the population and the total coverage is increased.
 This process is repeated over and over again until it is terminated by the user.
 
 # Seed Files
@@ -84,7 +84,7 @@ So for a preprocess step, I cut every file down to 1s using the same encoding an
 
 The next task is to find a subset of files, with a maximum coverage.
 We do not need an exact solution or a highly efficient algorithm as the main overhead is the coverage measurements.
-The following pseudocode is used to select the count best testcases with high total coverage.
+The following pseudocode is used to select the count best test cases with high total coverage.
 
 ```
 while len(seeds) > count:
@@ -97,13 +97,13 @@ while len(seeds) > count:
 
 # Mutations
 Mutations are used to change the input to the program, for example, bitflips, arithmetic operations, inserting or duplicating known data.
-Each mutation is descibed as a json which holds type and offset of the mutation.
-Instead of saving the mutated binary data for each testcase, only the list of mutations is saved.
-To generate a new testcase, new random mutations are added to this list.
+Each mutation is described as a json which holds type and offset of the mutation.
+Instead of saving the mutated binary data for each test case, only the list of mutations is saved.
+To generate a new test case, new random mutations are added to this list.
 
-This method allows for merging mutations by selecting a random subset of two testcases.
+This method allows for merging mutations by selecting a random subset of two test cases.
 The idea is to recombine known mutations that itself increased code coverage.
 This way of merging seems to work quite well as sometimes a whole bunch of new code blocks is discovered at once.
 
 The propability of mutating a testcase $i$ is $P = n_i / N$ wherease $N$ is the total amount of discovered and $n_i$ the new blocks found by testcase $i$.
-This focuses the workload to testcases that really improved code coverage and are more likely to hit new blocks due to undiscovered code.
+This focuses the workload on test cases that really improved code coverage and are more likely to hit new blocks due to undiscovered code.

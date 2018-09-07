@@ -5,22 +5,22 @@ description: "An analysis of using One-Time signature schemes in Cryptocurrencie
 
 
 # IOTAs Multisig Problem
-IOTA is a post quantum secure crypto currency that gained some value in the past.
+IOTA is a post-quantum secure cryptocurrency that gained some value in the past.
 It is based on the Winternitz One Time Signature Scheme.
-In contrast to RSA, DSA and ECDSA it is not based on computation in a group and cannot be broken by discrete log or factorization.
-Instead it is based on hash functions and secure as long as the hash function is preimage resistant.
+In contrast to RSA, DSA, and ECDSA it is not based on groups and cannot be broken by discrete log or factorization.
+Instead, it is based on hash functions and secures as long as the hash function is preimage resistant.
 
 As usual in cryptocurrencies, the public key is used for reception of funds.
 If the user wants to send some funds to a different address, she has to sign a transaction (bundle in case of IOTA)  using the private key that belongs to that public key.
-As the Winternitz signature scheme is a one time signature scheme there are some problems in practice.
+As the Winternitz signature scheme is a one-time signature scheme there are some problems in practice.
 The main implication is that if a transaction is made once, using a secret key, this key is burned and should NOT be used anymore.
 Therefore the reception address has to be changed if the user issues a transaction for that public key.
 Any further transaction to that public key would cause multiple signatures, what could cause security issues.
-It would be plausible if a user does not always notifies everyone, if she makes a transaction and a new public key has to be used.
+It would be plausible if a user does not always notify everyone if she makes a transaction and a new public key has to be used.
 Therefore multiple signatures could occur for a given address.
 
 # Winternitz
-To explain how Winternitz Sigatures works, lets first see how the signature for a single byte works (lets assume we have usual 8-bit byte for simplicity).
+To explain how Winternitz Signatures works lets first see how the signature for a single byte works (let's assume we have the usual 8-bit byte for simplicity).
 A random variable $x_i$ is chosen and stored as the secret key which in case of IOTA is derived from the secret seed.
 Let $h$ be the hash function and $pk_i$ the public key:
 
@@ -30,12 +30,12 @@ To sign a byte $b_i$ we have to publish:
 
 $$ sig_i = h^{256-b_i}(x_i) $$
 
-And the sigature can be verified by testing if
+And the signature can be verified by testing if
 
 $$ pk_i = h^{b_i}(sig_i) $$
 
-This scheme can adopted for multi byte signatures by choosing a different $x_i$ for every byte $b_i$.
-Of course this basic method is not secure at all, as an attacker can sign all bytes $b'_i < b_i$.
+This scheme can be adopted for multi-byte signatures by choosing a different $x_i$ for every byte $b_i$.
+Of course, this basic method is not secure at all, as an attacker can sign all bytes $b'_i < b_i$.
 The way IOTA handles this problem is to normalize the bytestring $B = (b_0, b_1, ... b_n)$ by changing the first bytes such that:
 
 $$ \sum_i b_i = 128 $$
@@ -125,7 +125,7 @@ def sign(forged_hash, sk_fragments, num_frags = 2):
     return fragments
 ```
 
-In the IOTA protocol the bundle hash is a hash value of a bundle, an actual money movement and can not be chosen arbitrarily.
+In the IOTA protocol, the bundle-hash is a hash value of a bundle, an actual money movement and can not be chosen arbitrarily.
 Even though random values can be signed if only two signatures are known.
 This can be achieved by slightly mutating a known signature.
 
@@ -142,7 +142,7 @@ def mutate(x, n=26):
 
 # Estimating Bit Security
 To estimate the bit security I made one assumption, that the signed hash is purely random.
-Of course as the hash is normalized this is not true in practice.
+Of course, as the hash is normalized this is not true in practice.
 Let $b'_i$ be the forged and $b^j_i$ the legitimate signature and assume that the propability of finding a signature is:
 
 $$ P = \prod_i P(b'_i > Max_j(b^j_i)) $$
@@ -159,7 +159,7 @@ A rough estimation is
 <!--
 # PoC
 The repository  [bolek42/iotaWayBack](https://github.com/bolek42/iotaWayBack.git) implements a basic PoC for the problems above.
-After using traverse.py to download the tangle parse_and_store.py can be used to export the transactions to a sqlite database.
+After using traverse.py to download the tangle parse_and_store.py can be used to export the transactions to an SQLite database.
 The whole process can take several hours to complete.
 
 ```
@@ -167,8 +167,8 @@ python find_multisig.py sqlalchemy_IRI.db
 ```
 
 can be used to find IOTA addresses that issued multiple signatures and still contain IOTA.
-The key fragments will be written in a json file in keys/[address].json.
-For each found address the balance and estimated bit security is printed.
+The key fragments will be written in a JSON file in keys/[address].json.
+For each found address the balance and estimated bit security are printed.
 
 
 The following call can be used to create valid signatures for a mutated bundle hash
@@ -177,7 +177,7 @@ The following call can be used to create valid signatures for a mutated bundle h
 python sigforge.py address bundle_hash
 ```
 
-To create signatures of random variables to show the feasibility of signature forging the bundle hash can be omitted.
+To create signatures of random variables to show the feasibility of signature forging the bundle-hash can be omitted.
 Note that this implementation is single threaded and not tuned for performance.
 
 ```

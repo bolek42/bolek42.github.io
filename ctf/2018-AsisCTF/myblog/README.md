@@ -1,3 +1,8 @@
+---
+title: "AsisCTF 2017 - Pwning - myblog"
+description: "Classical Buffer overflow with Seccomp and Stack Pivot"
+---
+
 # myblog
 
 The program offers a basic interface for managing post.
@@ -10,7 +15,7 @@ Any operation will result in an exit after completion.
 4. Exit
 ```
 
-A first quick analysis reveals some intresting facts.
+A first quick analysis reveals some interesting facts.
 First of all, a memory section with rwx privileges is allocated, this could be interesting for storing shellcode.
 Second, thr program uses seccomp, therefore some system calls might be disallowed.
 ```
@@ -23,7 +28,7 @@ prctl(PR_SET_SECCOMP, SECCOMP_MODE_FILTER, {len=11, filter=0x7ffefe130eb0}) = 0
 ```
 
 # Backdoor
-By reverse engineering we found a hidden option with the id 31337.
+By reverse engineering, we found a hidden option with the id 31337.
 This method will give us its own address and therefore can be used to compute the binary base.
 
 ```C
@@ -32,8 +37,8 @@ int backdoor() {
     printf("I will give you a gift %p\n", backdoor);
 ```
 
-In addition a 16 byte stack based buffer overflow is given, what allow us to control rip and rbp.
-Sadly this is not enough to store a complete rop chain.
+In addition, a 16-byte stack-based buffer overflow is given, what allows us to control rip and rbp.
+Sadly this is not enough to store a complete ROP chain.
 
 ```assembly
 sub        rsp, 0x10
@@ -78,7 +83,7 @@ The strategy would be:
 1. call show owner
 2. write 7 bytes of shellcode
 3. return to menu handler
-4. exit, jmp to rwx section
+4. exit, jump to the rwx section
 
 
 
@@ -95,7 +100,7 @@ r.send(payload)
 
 As the maximum shellcode length is limited to 7 bytes, we need a way to read more shellcode.
 As rax is already set to 0 (`sys_read`) we can try to directly write to the rwx memory section
-The rdi register defines the maximum number of bytes to be read and is a random pointer, therfore this register needs no changes.
+The rdi register defines the maximum number of bytes to be read and is a random pointer, therefore this register needs no changes.
 We only need to point rsi to the rwx section.
 As rsp is already pointing below the rwx pointer in the .bss section we can use the following shellcode, what compiles to exactly 7 bytes.
 
@@ -105,12 +110,12 @@ shellcode = pwn.asm(shellcode)
 r.send(shellcode)
 ```
 
-We send our shellcode shellcode with 7 bytes of padding, so it will be executed directly after the `read` system call returns.
+We send our shellcode with 7 bytes of padding, so it will be executed directly after the `read` system call returns.
 
 # Seccomp
 
-Even though we can execute arbitrary code, we are not finished yet as seccomp is used to blacklist some systemcalls.
-`seccomp-tools` (https://github.com/david942j/seccomp-tools) can be used to disassemble these rules and show them in a human readable format.
+Even though we can execute arbitrary code, we are not finished yet as seccomp is used to blacklist some system calls.
+`seccomp-tools` (https://github.com/david942j/seccomp-tools) can be used to disassemble these rules and show them in a human-readable format.
 
 ```
 seccomp-tools dump ./myblog
@@ -130,7 +135,7 @@ seccomp-tools dump ./myblog
 
 Execve is blocked, therefore, we cannot execute `execve("/bin/sh", NULL, NULL)` directly.
 Open is blocked, therefore we should not be able to open files and read the Flag.
-Even though `open_at syscall()` is not blocked, what allows us to open a file in a directory.
+Even though the `openat()` syscall is not blocked, what allows us to open a file relative to a directory.
 This syscall requires the following arguments:
 
 | Register | Description |
@@ -140,7 +145,7 @@ This syscall requires the following arguments:
 | rdx | Flags |
 | r10 | Mode |
 
-Therefore we can use the following shellcode to opena file, read 1024 bytes and write it to stdout.
+Therefore we can use the following shellcode to open a file, read 1024 bytes and write it to stdout.
 
 ```assembly
     jmp str;
