@@ -17,7 +17,7 @@ For optimal security use a recent Ubuntu Xenial or the provided libc.
 
 The application has a use after free vulnerability, allowing to overwrite users `FILE` struct.
 The note database is opened using `fopen();` and closed after logout, but the `user` pointer is not set to `NULL`.
-As the `FILE` struct is alloceted on the heap and freed by `fclose()` the next allocated heap chunk might overwrite this structure.
+As the `FILE` struct is allocated on the heap and freed by `fclose()` the next allocated heap chunk might overwrite this structure.
 If the user tries to add a long note after logout, the application segfaults.
 
 ```c
