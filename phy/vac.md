@@ -15,6 +15,7 @@ Electrons are emitted from the glowing tungsten wire and are accelerated to the 
 If the vacuum is good enough that the electrons are not slowed down by remaining gas, the assembly should be able to generate some X-rays.
 The following foto was taken using a delayed shutter and the high voltage supply was switched on from a safe distance of a couple of meters behind a concrete wall to avoid unnecessary irradiation.
 The Geiger counter shows a dose rate of 1.5 mSv/h a couple of centimeters away.
+This experiment was done back in 2010 and just shows, how much care should be taken, if playing with high voltage and high vacuum.
 
 <img class="imgLeft" src="images/disch.jpg">
 
@@ -31,22 +32,20 @@ As the pump was not in used for several years, the first startup was a little bi
 No matter what we tried, the diffusion pump did not create a high vacuum and we still had a gas discharge.
 We noticed that by just using the backing pump we only achieved a couple of hundreds volt for a gas discharge.
 By using [Paschen's law](https://en.wikipedia.org/wiki/Paschen%27s_law#/media/File:Paschen_curves.svg), we eyeballed a pressure of ca. 1mBar, but the diffusion pump requires a pressure of at least 0.4mBar.
-The copper pipe seals seem not to be ideal for vacuum use, as they tend to turn a little bit if some force is applied and they become leaky after some time.
+The <a class="imgTooltip", href="images/badseals.jpg">copper pipe seals</a> seem not to be ideal for vacuum use, as they tend to turn a little bit if some force is applied and they become leaky after some time.
 This problem could be solved by simplifying the hub and remove all of those flanges.
 
----
-# Fixing Bugs
+# Notes on Bugfixing
 
-<img class="imgRight" src="images/badseals.jpg">
+<img class="imgRight" src="images/disch-comparison.jpg">
 
 In the end, we noticed, that the problem could be identified earlier by just comparing the color of the gas discharges.
 For a leaky pump, a lot of air is present in the chamber and therefore a slightly orange/blue discharge can be observed.
 After fixing the issue the gas discharge turned to white.
-From left to right:
+The image shows from left to right:
 * Leaky backing pump
 * Fixed backing pump (comparable to leaky pump + diffusion pump)
 * Fixed backing pump + diffusion pump
 
-<img class="imgLeft" src="images/disch-comparison.jpg">
 
 

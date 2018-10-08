@@ -24,13 +24,30 @@ ga('send', 'pageview');
 
 
 <style>
+.header {background-color:#666666;width:100%;z-index:1000;position:fixed;height:70px}
+.sidebar {margin-top:70px;width:15%;}
+.content {padding-top:70px}
 a {color: green;text-decoration: underline;}
+h1 {clear: left;}
+h2 {clear: left;}
+h3 {clear: left;}
 .imgLeft {float: left; width: 30%;}
 .imgRight {float: right; width: 30%;}
 .imgCenter {width: 100%;}
-.header {background-color:#666666;width:100%;position:relative;z-index:1000;position:fixed;height:70px}
-.sidebar {margin-top:70px;width:15%;}
-.content {padding-top:70px}
+.imgTooltip {color: red}
+.imgTooltip .imgTooltipContent {
+    visibility: hidden;
+    position:absolute;
+    width: 40%;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.imgTooltip:hover .imgTooltipContent {
+    visibility: visible;
+    opacity: 1;
+    width: 40%;
+    position:absolute;
+}
 
 .collapsible {
     background-color: #777;
@@ -46,7 +63,7 @@ a {color: green;text-decoration: underline;}
 
 
 <body>
-  <div class="header"><center><h2><font color="#eeeeee">A Small Collection of Random Projects</font></h2></center></div>
+  <div class="header"><center><a href="/"><h2><font color="#eeeeee">A Small Collection of Random Projects</font></h2></a></center></div>
   <div class="w3-sidebar w3-light-grey w3-bar-block sidebar">
     <div>
       <button class="w3-button w3-block w3-left-align"  onclick="accordionToggle('side-sec')"> Security <i class="fa fa-caret-right accordion-arrow"></i> </button>
@@ -68,6 +85,7 @@ a {color: green;text-decoration: underline;}
     <div>
       <button class="w3-button w3-block w3-left-align"  onclick="accordionToggle('side-chals')"> CTF Challenges <i class="fa fa-caret-right accordion-arrow"></i> </button>
       <div id="side-chals" class="w3-hide w3-white w3-card accordion">
+        <a href="/chals/Hackover-2018/CloudNote/README.html" class="w3-bar-item w3-button">Hackover-2018/CloudNote - Pwn</a>
         <a href="/chals/MRMCD-2017/Covfefe/README.html" class="w3-bar-item w3-button">MRMCD-2017/Covfefe - Web</a>
       </div>
     </div>
@@ -88,7 +106,7 @@ a {color: green;text-decoration: underline;}
       <div id="side-phy" class="w3-hide w3-white w3-card accordion">
         <a href="/phy/hv.html" class="w3-bar-item w3-button">High Voltage</a>
         <a href="/phy/vac.html" class="w3-bar-item w3-button">High Vacuum</a>
-        <a href="/phy/ion.html" class="w3-bar-item w3-button">Iongun</a>
+        <a href="/phy/iongun" class="w3-bar-item w3-button">Iongun</a>
       </div>
     </div>
 
@@ -105,6 +123,7 @@ a {color: green;text-decoration: underline;}
   </div>
 
   <script>
+    //Side Bar Stuff
     function accordionGet() {
       var url = window.location.href.split("#")
       if (url.length > 1) return url[1].split(",");
@@ -175,18 +194,27 @@ a {color: green;text-decoration: underline;}
     makelink("imgRight");
     makelink("imgCenter");
 
+    //Link with image tooltip
+    var a = document.getElementsByClassName("imgTooltip");
+    for (var i = 0; i < a.length; i++) {
+        var img = document.createElement('img');
+        img.src = a[i].href;
+        img.className = "imgTooltipContent";
+        a[i].appendChild(img);
+    };
+
     //collapsible
     var coll = document.getElementsByClassName("collapsible");
     var i;
     for (i = 0; i < coll.length; i++) {
       coll[i].addEventListener("click", function() {
-        var content = this;
-        while ((' '+content.className+' ').indexOf(' collapsibleContent ') == -1) {
-          if (content.nextElementSibling == null) content = content.parentElement;
-          else content = content.nextElementSibling;
-        }
-        if (content.style.display === "block") content.style.display = "none";
-        else content.style.display = "block";
+      var content = this;
+      while ((' '+content.className+' ').indexOf(' collapsibleContent ') == -1) {
+        if (content.nextElementSibling == null) content = content.parentElement;
+        else content = content.nextElementSibling;
+      }
+      if (content.style.display === "block") content.style.display = "none";
+      else content.style.display = "block";
       });
     }
   </script>
