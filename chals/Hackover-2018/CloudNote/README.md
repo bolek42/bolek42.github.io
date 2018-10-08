@@ -8,7 +8,7 @@ description: "A FILE struct use after free""
 This challenge was created for the Hackover 2018 CTF.
 
 ```
-This leightweight service hosts your notes in the Cloud.
+This lightweight service hosts your notes in the Cloud.
 Feel free to test our service with the guest:guest test account.
 For optimal security use a recent Ubuntu Xenial or the provided libc.
 ```
