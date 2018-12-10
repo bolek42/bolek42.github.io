@@ -514,12 +514,17 @@ Even though, there are appears to be propper bound checks for the player movemen
 
 # Bug description
 
-The bug happens in the `damage_and_knock_back` function, which is executed, if the monster gets the player.
+The bug happens in the `damage_and_knock_back()` function, which is executed, if the monster gets the player.
 
 ```
+struct player {
+    [...]
+    uint8_t pos_y;
+    [...]
+};
 [...]
-else if(e->dy < 0 && p->pos_y - 1 >= Y_MIN)
-            p->pos_y--;
+    else if(e->dy < 0 && p->pos_y - 1 >= Y_MIN)
+                p->pos_y--;
 [...]
 ```
 
