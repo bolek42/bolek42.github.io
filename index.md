@@ -2,7 +2,7 @@
 title: "bolek42 Change Log"
 ---
 
-### Dect 2018
+### Dec 2018
 - Added [CTF/2018-hxp/pwn game - Pwn](ctf/2018-hxp/pwn_game/README.html)
 
 ### Oct 2018
