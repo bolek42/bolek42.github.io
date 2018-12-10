@@ -2,6 +2,9 @@
 title: "bolek42 Change Log"
 ---
 
+### Dect 2018
+- Added [CTF/2018-hxp/pwn game - Pwn](ctf/2018-hxp/pwn_game/README.html)
+
 ### Oct 2018
 - Added [CHALS/Hackover-2018/CloudNote - Pwn](chals/Hackover-2018/CloudNote/README.html)
 - Updated [Iongun](phy/iongun)
@@ -10,9 +13,9 @@ title: "bolek42 Change Log"
 - Added [CHALS/MRMCD-2017/Covfefe - Web](chals/MRMCD-2017/Covfefe/README.html)
 
 ### Aug 2018
-- Added [CTF/2017-GoogleCTF/inst_prof - Pwn](ctf/2017-GoogleCTF/inst_prof)
-- Added [CTF/2017-PlaidCTF/terebeep - Misc](ctf/2017-PlaidCTF/terebeep)
-- Added [CTF/2018-AsisCTF/myblog - Pwn](ctf/2018-AsisCTF/myblog)
+- Added [CTF/2017-GoogleCTF/inst_prof - Pwn](ctf/2017-GoogleCTF/inst_prof/README.html)
+- Added [CTF/2017-PlaidCTF/terebeep - Misc](ctf/2017-PlaidCTF/terebeep/README.html)
+- Added [CTF/2018-AsisCTF/myblog - Pwn](ctf/2018-AsisCTF/myblog/README.html)
 
 ### Dec 2017
 - Added CVE entry to [Fuzzing Article](sec/fuzz.html)

@@ -1,5 +1,5 @@
 ---
-title: "AsisCTF 2017 - Pwning - myblog"
+title: "AsisCTF 2018 - Pwning - myblog"
 description: "Classical Buffer overflow with Seccomp and Stack Pivot"
 ---
 

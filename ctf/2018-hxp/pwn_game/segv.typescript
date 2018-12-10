@@ -1,0 +1,726 @@
+[0m[H[J╔══════════════════════════════╗
+║[31m53 [32m52 [31m51 [31m54 [31m54 [31m53 [31m50 [32m54 [32m52 [31m52 [0m║
+║[31m51 [31m52 [31m53 [31m52 [31m53 [31m51 [31m50 [31m50 [31m53 [31m50 [0m║
+║[31m52 [31m50 [31m52 [32m52 [31m51 [32m51 [32m54 [32m52 [31m51 [31m51 [0m║
+║[31m50 [31m54 [31m54 [32m53 [32m54 [31m50 [31m52 [31m50 [32m53 [32m53 [0m║
+║[31m53 [31m53 [32m52 [31m54 [31m54 [31m51 [32m51 [31m54 [31m53 [31m54 [0m║
+║[31m50 [32m51 [31m50 [31m52 [31m52 [31m53 [32m50 [31m52 [31m54 [31m52 [0m║
+║[31m51 [32m50 [31m52 [31m53 [31m53 [31m52 [31m51 [31m54 [31m53 [31m51 [0m║
+║[32m52 [31m51 [31m53 [31m51 [31m54 [31m50 [31m54 [31m54 [32m51 [32m51 [0m║
+║[31m54 [31m52 [31m52 [31m51 [31m50 [32m51 [31m53 [31m53 [31m54 [31m54 [0m║
+║[31m51 [31m51 [31m50 [31m52 [32m50 [31m51 [31m52 [31m50 [31m54 [32m54 [0m║
+╚══════════════════════════════╝
+Lifes: [31mooo  [0m    Score: 500     Position: (5, 5)
+CURRENT CELL: [31m53 -> 50
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[2;2H[91m[7m:O[7;17H[0m[7mOo[7;17H[0m[7;17H[31m53 [13;0H[0mLifes: [31mooo  [0m    Score: 499     Position: (5, 6)
+CURRENT CELL: [31m52 -> 51
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[2;2H[91m[7m:O[8;17H[0m[7mOo[8;17H[0m[8;17H[31m52 [13;0H[0mLifes: [31mooo  [0m    Score: 498     Position: (5, 7)
+CURRENT CELL: [31m50 -> 51
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[2;2H[91m[7m:O[9;17H[0m[7mOo[9;17H[0m[9;17H[31m50 [13;0H[0mLifes: [31mooo  [0m    Score: 497     Position: (6, 7)
+CURRENT CELL: [31m54 -> 50
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[2;2H[91m[7m:O[9;20H[0m[7mOo[9;20H[0m[9;20H[31m54 [2;2H[31m53 [13;0H[0mLifes: [31mooo  [0m    Score: 496     Position: (7, 7)
+CURRENT CELL: [31m54 -> 50
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[3;5H[91m[7m:O[9;23H[0m[7mOo[9;23H[0m[9;23H[31m54 [3;5H[31m52 [13;0H[0mLifes: [31mooo  [0m    Score: 495     Position: (6, 7)
+CURRENT CELL: [31m54 -> 50
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[4;8H[91m[7m:O[9;20H[0m[7mOo[9;20H[0m[9;20H[31m54 [4;8H[31m52 [13;0H[0mLifes: [31mooo  [0m    Score: 494     Position: (7, 7)
+CURRENT CELL: [31m54 -> 50
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[5;11H[91m[7m:O[9;23H[0m[7mOo[9;23H[0m[9;23H[31m54 [13;0H[0mLifes: [31mooo  [0m    Score: 493     Position: (7, 8)
+CURRENT CELL: [31m53 -> 54
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[5;11H[91m[7m:O[10;23H[0m[7mOo[10;23H[0m[10;23H[31m53 [13;0H[0mLifes: [31mooo  [0m    Score: 492     Position: (8, 8)
+CURRENT CELL: [31m54 -> 53
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[5;11H[91m[7m:O[10;26H[0m[7mOo[10;26H[0m[10;26H[31m54 [13;0H[0mLifes: [31mooo  [0m    Score: 491     Position: (8, 7)
+CURRENT CELL: [32m51 -> 51
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[5;11H[91m[7m:O[9;26H[0m[7mOo[9;26H[0m[9;26H[32m51 [5;11H[32m53 [13;0H[0mLifes: [31mooo  [0m    Score: 490     Position: (8, 6)
+CURRENT CELL: [31m53 -> 54
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[6;14H[91m[7m:O[8;26H[0m[7mOo[8;26H[0m[8;26H[31m53 [6;14H[31m54 [13;0H[0mLifes: [31mooo  [0m    Score: 489     Position: (8, 5)
+CURRENT CELL: [31m54 -> 52
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[7;17H[91m[7m:O[7;26H[0m[7mOo[7;26H[0m[7;26H[31m54 [7;17H[31m53 [13;0H[0mLifes: [31mooo  [0m    Score: 488     Position: (8, 4)
+CURRENT CELL: [31m53 -> 50
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[6;20H[91m[7m:O[6;26H[0m[7mOo[6;26H[0m[6;26H[31m53 [13;0H[0mLifes: [31mooo  [0m    Score: 487     Position: (8, 3)
+CURRENT CELL: [32m53 -> 53
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[6;20H[91m[7m:O[5;26H[0m[7mOo[5;26H[0m[5;26H[32m53 [13;0H[0mLifes: [31mooo  [0m    Score: 486     Position: (8, 2)
+CURRENT CELL: [31m51 -> 52
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[6;20H[91m[7m:O[4;26H[0m[7mOo[4;26H[0m[4;26H[31m51 [13;0H[0mLifes: [31mooo  [0m    Score: 485     Position: (8, 1)
+CURRENT CELL: [31m53 -> 51
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[6;20H[91m[7m:O[3;26H[0m[7mOo[3;26H[0m[3;26H[31m53 [6;20H[32m51 [13;0H[0mLifes: [31mooo  [0m    Score: 484     Position: (7, 1)
+CURRENT CELL: [31m50 -> 54
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[5;23H[91m[7m:O[3;23H[0m[7mOo[3;23H[0m[3;23H[31m50 [5;23H[31m50 [13;0H[0mLifes: [31mooo  [0m    Score: 483     Position: (6, 1)
+CURRENT CELL: [31m50 -> 53
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[4;20H[91m[7m:O[3;20H[0m[7mOo[3;20H[0m[3;20H[31m50 [4;20H[32m54 [13;0H[0mLifes: [31mooo  [0m    Score: 482     Position: (6, 0)
+CURRENT CELL: [31m50 -> 54
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[3;20H[91m[7m:O[2;20H[0m[7mOo[2;20H[0m[2;20H[31m50 [13;0H[0mLifes: [31mooo  [0m    Score: 481     Position: (5, 0)
+CURRENT CELL: [31m53 -> 50
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[3;20H[91m[7m:O[2;17H[0m[7mOo[2;17H[0m[2;17H[31m53 [13;0H[0mLifes: [31mooo  [0m    Score: 480     Position: (5, 1)
+CURRENT CELL: [31m51 -> 54
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[3;20H[91m[7m:O[3;17H[0m[7mOo[3;17H[0m[3;17H[31m51 [13;0H[0mLifes: [31mooo  [0m    Score: 479     Position: (5, 2)
+CURRENT CELL: [32m51 -> 51
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[3;20H[91m[7m:O[4;17H[0m[7mOo[4;17H[0m[4;17H[32m51 [3;20H[31m50 [13;0H[0mLifes: [31mooo  [0m    Score: 478     Position: (5, 3)
+CURRENT CELL: [31m50 -> 53
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[4;17H[91m[7m:O[5;17H[0m[7mOo[5;17H[0m[5;17H[31m50 [4;17H[32m51 [13;0H[0mLifes: [31mooo  [0m    Score: 477     Position: (5, 4)
+CURRENT CELL: [31m51 -> 53
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[5;17H[91m[7m:O[6;17H[0m[7mOo[6;17H[0m[6;17H[31m51 [5;17H[31m50 [13;0H[0mLifes: [31mooo  [0m    Score: 476     Position: (5, 5)
+CURRENT CELL: [31m53 -> 50
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[6;17H[91m[7m:O[7;17H[0m[7mOo[7;17H[0m[7;17H[31m53 [13;0H[0mLifes: [31mooo  [0m    Score: 475     Position: (5, 6)
+CURRENT CELL: [31m52 -> 51
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[6;17H[91m[7m:O[8;17H[0m[7mOo[8;17H[0m[8;17H[31m52 [13;0H[0mLifes: [31mooo  [0m    Score: 474     Position: (5, 7)
+CURRENT CELL: [31m50 -> 51
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[6;17H[91m[7m:O[9;17H[0m[7mOo[9;17H[0m[9;17H[31m50 [13;0H[0mLifes: [31mooo  [0m    Score: 473     Position: (5, 8)
+CURRENT CELL: [32m51 -> 51
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[6;17H[91m[7m:O[10;17H[0m[7mOo[10;17H[0m[10;17H[32m51 [6;17H[31m51 [13;0H[0mLifes: [31mooo  [0m    Score: 472     Position: (5, 9)
+CURRENT CELL: [31m51 -> 50
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[7;17H[91m[7m:O[11;17H[0m[7mOo[11;17H[0m[7;17H[31m53 [13;0H[0mLifes: [31mooo  [0m    Score: 471     Position: (5, 9)
+CURRENT CELL: [31m51 -> 50
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[8;17H[91m[7m:O[11;17H[0m[7mOo[11;17H[0m[8;17H[31m52 [13;0H[0mLifes: [31mooo  [0m    Score: 470     Position: (5, 9)
+CURRENT CELL: [31m51 -> 50
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[9;17H[91m[7m:O[11;17H[0m[7mOo[11;17H[0m[11;17H[31m51 [13;0H[0mLifes: [31mooo  [0m    Score: 469     Position: (4, 9)
+CURRENT CELL: [32m50 -> 50
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[9;17H[91m[7m:O[11;14H[0m[7mOo[11;14H[0m[11;14H[32m50 [13;0H[0mLifes: [31mooo  [0m    Score: 468     Position: (3, 9)
+CURRENT CELL: [31m52 -> 54
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[9;17H[91m[7m:O[11;11H[0m[7mOo[11;11H[0m[11;11H[31m52 [13;0H[0mLifes: [31mooo  [0m    Score: 467     Position: (3, 8)
+CURRENT CELL: [31m51 -> 54
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[9;17H[91m[7m:O[10;11H[0m[7mOo[10;11H[0m[10;11H[31m51 [9;17H[31m50 [13;0H[0mLifes: [31mooo  [0m    Score: 466     Position: (3, 7)
+CURRENT CELL: [31m51 -> 53
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[9;14H[91m[7m:O[9;11H[0m[7mOo[9;11H[0m[9;11H[31m51 [9;14H[31m54 [13;0H[0mLifes: [31mooo  [0m    Score: 465     Position: (2, 7)
+CURRENT CELL: [31m53 -> 50
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[9;11H[91m[7m:O[9;8H[0m[7mOo[9;8H[0m[9;8H[31m53 [9;11H[31m51 [13;0H[0mLifes: [31mooo  [0m    Score: 464     Position: (1, 7)
+CURRENT CELL: [31m51 -> 54
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[9;8H[91m[7m:O[9;5H[0m[7mOo[9;5H[0m[9;5H[31m51 [13;0H[0mLifes: [31mooo  [0m    Score: 463     Position: (0, 7)
+CURRENT CELL: [32m52 -> 52
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[9;8H[91m[7m:O[9;2H[0m[7mOo[9;2H[0m[9;2H[32m52 [13;0H[0mLifes: [31mooo  [0m    Score: 462     Position: (0, 6)
+CURRENT CELL: [31m51 -> 52
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[9;8H[91m[7m:O[8;2H[0m[7mOo[8;2H[0m[8;2H[31m51 [13;0H[0mLifes: [31mooo  [0m    Score: 461     Position: (0, 5)
+CURRENT CELL: [31m50 -> 51
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[9;8H[91m[7m:O[7;2H[0m[7mOo[7;2H[0m[7;2H[31m50 [9;8H[31m53 [13;0H[0mLifes: [31mooo  [0m    Score: 460     Position: (0, 4)
+CURRENT CELL: [31m53 -> 52
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[8;5H[91m[7m:O[6;2H[0m[7mOo[6;2H[0m[6;2H[31m53 [8;5H[32m50 [13;0H[0mLifes: [31mooo  [0m    Score: 459     Position: (0, 3)
+CURRENT CELL: [31m50 -> 53
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[7;2H[91m[7m:O[5;2H[0m[7mOo[5;2H[0m[5;2H[31m50 [7;2H[31m50 [13;0H[0mLifes: [31mooo  [0m    Score: 458     Position: (0, 2)
+CURRENT CELL: [31m52 -> 54
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[6;2H[91m[7m:O[4;2H[0m[7mOo[4;2H[0m[4;2H[31m52 [13;0H[0mLifes: [31mooo  [0m    Score: 457     Position: (0, 1)
+CURRENT CELL: [31m51 -> 50
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[6;2H[91m[7m:O[3;2H[0m[7mOo[3;2H[0m[3;2H[31m51 [13;0H[0mLifes: [31mooo  [0m    Score: 456     Position: (0, 0)
+CURRENT CELL: [31m53 -> 50
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[6;2H[91m[7m:O[2;2H[0m[7mOo[2;2H[0m[13;0H[0mLifes: [31mooo  [0m    Score: 455     Position: (0, 0)
+CURRENT CELL: [31m53 -> 50
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[6;2H[91m[7m:O[2;2H[0m[7mOo[2;2H[0m[6;2H[31m53 [13;0H[0mLifes: [31mooo  [0m    Score: 454     Position: (0, 0)
+CURRENT CELL: [31m53 -> 50
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[5;2H[91m[7m:O[2;2H[0m[7mOo[2;2H[0m[5;2H[31m50 [13;0H[0mLifes: [31mooo  [0m    Score: 453     Position: (0, 0)
+CURRENT CELL: [31m53 -> 50
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[4;2H[91m[7m:O[2;2H[0m[7mOo[2;2H[0m[4;2H[31m52 [13;0H[0mLifes: [31mooo  [0m    Score: 452     Position: (0, 0)
+CURRENT CELL: [31m53 -> 50
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[3;2H[91m[7m:O[2;2H[0m[7mOo[2;2H[0m[13;0H[0mLifes: [31mooo  [0m    Score: 451     Position: (0, 0)
+CURRENT CELL: [31m53 -> 50
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[3;2H[91m[7m:O[2;2H[0m[7mOo[2;2H[0m[13;0H[0mLifes: [31mooo  [0m    Score: 450     Position: (0, 0)
+CURRENT CELL: [31m53 -> 50
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[3;2H[91m[7m:O[2;2H[0m[7mOo[2;2H[0m[13;0H[0mLifes: [31mooo  [0m    Score: 449     Position: (0, 0)
+CURRENT CELL: [31m53 -> 50
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[3;2H[91m[7m:O[2;2H[0m[7mOo[2;2H[0m[2;2H[31m53 [3;2H[31m51 [13;0H[0mLifes: [31moo   [0m    Score: 448     Position: (0, 255)
+CURRENT CELL: [32m00 -> 00
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[2;2H[91m[7m:O[257;2H[0m[7mOo[257;2H[0m[257;2H[32m00 [2;2H[31m53 [13;0H[0mLifes: [31moo   [0m    Score: 447     Position: (0, 254)
+CURRENT CELL: [32mff -> ff
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[257;2H[91m[7m:O[256;2H[0m[7mOo[256;2H[0m[256;2H[32mff [257;2H[32m00 [13;0H[0mLifes: [31moo   [0m    Score: 446     Position: (0, 253)
+CURRENT CELL: [31m55 -> ff
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[256;2H[91m[7m:O[255;2H[0m[7mOo[255;2H[0m[255;2H[31m55 [13;0H[0mLifes: [31moo   [0m    Score: 445     Position: (0, 252)
+CURRENT CELL: [31m00 -> 7b
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[256;2H[91m[7m:O[254;2H[0m[7mOo[254;2H[0m[254;2H[31m00 [13;0H[0mLifes: [31moo   [0m    Score: 444     Position: (0, 251)
+CURRENT CELL: [32m00 -> 00
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[256;2H[91m[7m:O[253;2H[0m[7mOo[253;2H[0m[253;2H[32m00 [13;0H[0mLifes: [31moo   [0m    Score: 443     Position: (0, 250)
+CURRENT CELL: [32mff -> ff
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[256;2H[91m[7m:O[252;2H[0m[7mOo[252;2H[0m[252;2H[32mff [256;2H[32mff [13;0H[0mLifes: [31moo   [0m    Score: 442     Position: (0, 249)
+CURRENT CELL: [32mff -> ff
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[255;2H[91m[7m:O[251;2H[0m[7mOo[251;2H[0m[251;2H[32mff [255;2H[31m55 [13;0H[0mLifes: [31moo   [0m    Score: 441     Position: (0, 248)
+CURRENT CELL: [32m00 -> 00
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[254;2H[91m[7m:O[250;2H[0m[7mOo[250;2H[0m[250;2H[32m00 [254;2H[31m00 [13;0H[0mLifes: [31moo   [0m    Score: 440     Position: (0, 247)
+CURRENT CELL: [32m00 -> 00
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[253;2H[91m[7m:O[249;2H[0m[7mOo[249;2H[0m[249;2H[32m00 [13;0H[0mLifes: [31moo   [0m    Score: 439     Position: (0, 246)
+CURRENT CELL: [31m91 -> 00
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[253;2H[91m[7m:O[248;2H[0m[7mOo[248;2H[0m[248;2H[31m91 [13;0H[0mLifes: [31moo   [0m    Score: 438     Position: (0, 245)
+CURRENT CELL: [31ma7 -> ff
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[253;2H[91m[7m:O[247;2H[0m[7mOo[247;2H[0m[247;2H[31ma7 [13;0H[0mLifes: [31moo   [0m    Score: 437     Position: (0, 244)
+CURRENT CELL: [31m00 -> 4e
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[253;2H[91m[7m:O[246;2H[0m[7mOo[246;2H[0m[246;2H[31m00 [253;2H[32m00 [13;0H[0mLifes: [31moo   [0m    Score: 436     Position: (0, 243)
+CURRENT CELL: [32m00 -> 00
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[252;2H[91m[7m:O[245;2H[0m[7mOo[245;2H[0m[245;2H[32m00 [252;2H[32mff [13;0H[0mLifes: [31moo   [0m    Score: 435     Position: (0, 242)
+CURRENT CELL: [32m55 -> 55
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[251;2H[91m[7m:O[244;2H[0m[7mOo[244;2H[0m[244;2H[32m55 [251;2H[32mff [13;0H[0mLifes: [31moo   [0m    Score: 434     Position: (0, 241)
+CURRENT CELL: [31m67 -> 00
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[250;2H[91m[7m:O[243;2H[0m[7mOo[243;2H[0m[243;2H[31m67 [13;0H[0mLifes: [31moo   [0m    Score: 433     Position: (0, 240)
+CURRENT CELL: [32m00 -> 00
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[250;2H[91m[7m:O[242;2H[0m[7mOo[242;2H[0m[242;2H[32m00 [13;0H[0mLifes: [31moo   [0m    Score: 432     Position: (0, 239)
+CURRENT CELL: [32m00 -> 00
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[250;2H[91m[7m:O[241;2H[0m[7mOo[241;2H[0m[241;2H[32m00 [13;0H[0mLifes: [31moo   [0m    Score: 431     Position: (0, 238)
+CURRENT CELL: [32mff -> ff
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[250;2H[91m[7m:O[240;2H[0m[7mOo[240;2H[0m[240;2H[32mff [250;2H[32m00 [13;0H[0mLifes: [31moo   [0m    Score: 430     Position: (0, 237)
+CURRENT CELL: [32m00 -> 00
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[249;2H[91m[7m:O[239;2H[0m[7mOo[239;2H[0m[239;2H[32m00 [249;2H[32m00 [13;0H[0mLifes: [31moo   [0m    Score: 429     Position: (0, 236)
+CURRENT CELL: [31m23 -> 00
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[248;2H[91m[7m:O[238;2H[0m[7mOo[238;2H[0m[238;2H[31m23 [248;2H[31m91 [13;0H[0mLifes: [31moo   [0m    Score: 428     Position: (1, 236)
+CURRENT CELL: [31m52 -> 00
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[247;5H[91m[7m:O[238;5H[0m[7mOo[238;5H[0m[238;5H[31m52 [13;0H[0mLifes: [31moo   [0m    Score: 427     Position: (2, 236)
+CURRENT CELL: [31mdc -> 00
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[247;5H[91m[7m:O[238;8H[0m[7mOo[238;8H[0m[238;8H[31mdc [13;0H[0mLifes: [31moo   [0m    Score: 426     Position: (3, 236)
+CURRENT CELL: [31mf7 -> 00
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[247;5H[91m[7m:O[238;11H[0m[7mOo[238;11H[0m[238;11H[31mf7 [13;0H[0mLifes: [31moo   [0m    Score: 425     Position: (4, 236)
+CURRENT CELL: [31mff -> 00
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[247;5H[91m[7m:O[238;14H[0m[7mOo[238;14H[0m[238;14H[31mff [247;5H[31m1d [13;0H[0mLifes: [31moo   [0m    Score: 424     Position: (5, 236)
+CURRENT CELL: [31m7f -> 00
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[246;8H[91m[7m:O[238;17H[0m[7mOo[238;17H[0m[238;17H[31m7f [246;8H[31m00 [13;0H[0mLifes: [31moo   [0m    Score: 423     Position: (6, 236)
+CURRENT CELL: [32m00 -> 00
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[245;11H[91m[7m:O[238;20H[0m[7mOo[238;20H[0m[245;11H[32m00 [13;0H[0mLifes: [31moo   [0m    Score: 0     Position: (6, 236)
+CURRENT CELL: [31m01 -> 00
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[244;14H[91m[7m:O[238;20H[0m[7mOo[238;20H[0m[13;0H[0mLifes: [31moo   [0m    Score: 0     Position: (6, 236)
+CURRENT CELL: [31m11 -> 00
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[244;14H[91m[7m:O[238;20H[0m[7mOo[238;20H[0m[238;20H[31m11 [13;0H[0mLifes: [31moo   [0m    Score: 0     Position: (7, 236)
+CURRENT CELL: [32m00 -> 00
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[244;14H[91m[7m:O[238;23H[0m[7mOo[238;23H[0m[13;0H[0mLifes: [31moo   [0m    Score: 0     Position: (7, 236)
+CURRENT CELL: [31m01 -> 00
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[244;14H[91m[7m:O[238;23H[0m[7mOo[238;23H[0m[244;14H[32mb0 [13;0H[0mLifes: [31moo   [0m    Score: 0     Position: (7, 236)
+CURRENT CELL: [31m11 -> 00
+[0m================== CONTROLS: ===================
+<w/a/s/d>: MOVE         <q>: QUIT
+<+/->: INC/DEC 1        <1/2>: INC/DEC 0x10
+<r>: SHOW REAL FIELD    <t>: SHOW TARGET FIELD
+<h>: TOGGLE HEADLESS    <f>: RENDER SINGLE IMAGE
+
+[243;17H[91m[7m:O[238;23H[0m[7mOo[238;23HEXITING
+[0m[H[JGAME OVER, YOUR SCORE: 0!
+PRESS ENTER TO EXIT!
+
+Program received signal SIGSEGV, Segmentation fault.
+[2J[H[;34m[----------------------------------registers-----------------------------------][0m
+[m[;32mRAX[0m: 0x0 
+[;32mRBX[0m: 0x0 
+[;32mRCX[0m: [;31m0x7ffff7e92e4c[0m (<tcsetattr+124>:	cmp    rax,0xfffffffffffff000)
+[;32mRDX[0m: [;34m0x7fffffffd350[0m --> 0x500004500 
+[;32mRSI[0m: 0x5402 
+[;32mRDI[0m: 0x0 
+[;32mRBP[0m: [;31m0x555555556680[0m (<__libc_csu_init>:	endbr64)
+[;32mRSP[0m: [;34m0x7fffffffdbd8[0m --> 0x11117ffff7dc5223 
+[;32mRIP[0m: [;31m0x55555555667d[0m (<main+461>:	ret)
+[;32mR8 [0m: [;34m0x5555555590f1[0m --> 0x10004157f1c03 
+[;32mR9 [0m: [;34m0x7ffff7f61720[0m --> 0x0 
+[;32mR10[0m: [;34m0x7ffff7f66500[0m (0x00007ffff7f66500)
+[;32mR11[0m: 0x206 
+[;32mR12[0m: [;31m0x555555555120[0m (<_start>:	endbr64)
+[;32mR13[0m: [;34m0x7fffffffdcb0[0m --> 0x1 
+[;32mR14[0m: 0x0 
+[;32mR15[0m: 0x0[0m
+[m[;32mEFLAGS[0m: 0x10202 ([;32mcarry[0m [;32mparity[0m [;32madjust[0m [;32mzero[0m [;32msign[0m [;32mtrap[0m [;1;31mINTERRUPT[0m [;32mdirection[0m [;32moverflow[0m)[0m
+[m[;34m[-------------------------------------code-------------------------------------][0m[0m
+[m   0x555555556674 <main+452>:[;2m	add    rsp,0x838[0m
+   0x55555555667b <main+459>:[;2m	pop    rbx[0m
+   0x55555555667c <main+460>:[;2m	pop    rbp[0m
+=> 0x55555555667d <main+461>:[;1;32m	ret    [0m
+   0x55555555667e:[m	xchg   ax,ax[0m
+   0x555555556680 <__libc_csu_init>:[m	endbr64 [0m
+   0x555555556684 <__libc_csu_init+4>:[m	push   r15[0m
+   0x555555556686 <__libc_csu_init+6>:[m	mov    r15,rdx[0m[0m
+[m[;34m[------------------------------------stack-------------------------------------][0m[0m
+[m0000| [;34m0x7fffffffdbd8[0m --> 0x11117ffff7dc5223 [0m
+[m0008| [;34m0x7fffffffdbe0[0m --> 0x0 [0m
+[m0016| [;34m0x7fffffffdbe8[0m --> [;34m0x7fffffffdcb8[0m --> [;34m0x7fffffffe012[0m ("/home/.../hxp/pwn game/challenge")[0m
+[m0024| [;34m0x7fffffffdbf0[0m --> 0x100040000 [0m
+[m0032| [;34m0x7fffffffdbf8[0m --> [;31m0x5555555564b0[0m (<main>:	push   rbp)[0m
+[m0040| [;34m0x7fffffffdc00[0m --> 0x0 [0m
+[m0048| [;34m0x7fffffffdc08[0m --> 0xa1fdbd836767b293 [0m
+[m0056| [;34m0x7fffffffdc10[0m --> [;31m0x555555555120[0m (<_start>:	endbr64)[0m
+[;34m[------------------------------------------------------------------------------][0m
+[mLegend: [;31mcode[0m, [;34mdata[0m, [;32mrodata[0m, value[0m
+[mStopped reason: [;31mSIGSEGV[0m[0m
+0x000055555555667d in main ()
+[;31mgdb-peda$ [0mbt
+#0  0x000055555555667d in main ()
+#1  0x11117ffff7dc5223 in ?? ()
+#2  0x0000000000000000 in ?? ()
