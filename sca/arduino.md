@@ -67,4 +67,4 @@ The spike (high correlation) at the beginning of the DES routine is caused by th
 By comparing the maximum correlation over time for all possible subkeys, the correct subkey had the highest correlation after 1500 traces.
 The distance between first and second winner is quite significant and a total correlation of 0.1 not too bad, especially as the underlying signal had a 70 times lower bandwidth than the CPU clock of the DUT.
 
-<img class="imgCenter" src="images/des-trend-osr-666.jpg)
+<img class="imgCenter" src="images/des-trend-osr-666.jpg">
