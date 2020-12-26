@@ -1,6 +1,6 @@
 ---
 title: "CTF Hackover 2018 - Pwn - CloudNote"
-description: "A FILE struct use after free""
+description: "A FILE struct use after free"
 ---
 
 # Description

@@ -2,6 +2,12 @@
 title: "bolek42 Change Log"
 ---
 
+### Apr 2020
+- External [Bluetooth/Bluefrag](https://insinuator.net/2020/04/cve-2020-0022-an-android-8-0-9-0-bluetooth-zero-click-rce-bluefrag/)
+
+### Mar 2020
+- External [Bluetooth/Frankenstein](https://github.com/seemoo-lab/frankenstein)
+
 ### Dec 2018
 - Added [CTF/2018-hxp/pwn game - Pwn](ctf/2018-hxp/pwn_game/README.html)
 
